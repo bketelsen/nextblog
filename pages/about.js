@@ -42,19 +42,17 @@ export default function About() {
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
-              Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His
-              research interests includes complexity modelling of tailwinds, headwinds and
-              crosswinds.
+              I'm a cloud developer advocate at Microsoft Azure. I love learning and experimenting
+              and you'll always find me trying to connect things that weren't previously connected
+              or build things that haven't been built.
             </p>
             <p>
-              He leads the clean energy group which develops 3D air pollution-climate models, writes
-              differential equation solvers, and manufactures titanium plated air ballons. In his
-              free time he bakes raspberry pi.
+              Along with Erik St. Martin, I co-founded GopherCon, the largest Go conference in the
+              world.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique
-              placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem
-              nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+              While my strengths lie in the backend, I've been forcing myself to learn frontend
+              development recently, and enjoy Next.js and Svelte quite a bit.
             </p>
           </div>
         </div>
