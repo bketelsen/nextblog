@@ -4,6 +4,8 @@ import MDXComponents from '@/components/MDXComponents'
 import PageTitle from '@/components/PageTitle'
 import PostLayout from '@/layouts/PostLayout'
 import generateRss from '@/lib/generate-rss'
+import generateOG from '@/lib/ogimage'
+
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
 
 export async function getStaticPaths() {
@@ -28,6 +30,9 @@ export async function getStaticProps({ params }) {
   // rss
   const rss = generateRss(allPosts)
   fs.writeFileSync('./public/index.xml', rss)
+  allPosts.map((post) => {
+    generateOG(post)
+  })
 
   return { props: { post, prev, next } }
 }
