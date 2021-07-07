@@ -1,28 +1,12 @@
 ---
 title: Remote SSH Connections to WSL2
-layout: post
 date: '2020-03-03'
-aliases:
-  - '/ssh-to-wsl2'
-cover:
-  image: 'cdc-_XLJy3h77cw-unsplash.jpg' # image path/url
-  alt: 'Too Many Screens' # alt text
-  caption: 'https://unsplash.com/photos/_XLJy3h77cw' # display caption under cover
-  relative: true # when using page bundles set this to true
+images: ['cdc-_XLJy3h77cw-unsplash.jpg']
 summary: 'A Series on Using Windows for Open Source Development'
-tags:
-  - 'windows'
-  - 'linux'
-  - 'open source'
-  - '30daywslchallenge'
-categories:
-  - 'Development'
-  - 'Open Source'
+tags: ['windows', 'linux', 'open source', '30daywslchallenge']
 ---
 
 In this article I share my learnings on remotely accessing your Windows 10 computer. My motivation was to determine efficient ways to access both the Windows environment, and the WSL2 development environment from another computer.
-
-<!--more-->
 
 ## Remote Access for New Windows Users
 
@@ -38,11 +22,11 @@ Accessing a Windows computer remotely is extremely simple and performant compare
 
 To enable RDP, go to `Start > Settings > System > Remote Desktop`, and enable the slider.
 
-![Remote Desktop](/images/wsl/rdp.png)
+![Remote Desktop](/static/images/wsl/rdp.png)
 
 If you intend to connect from a client that isn't running Windows (like my iPad, for example) you'll also want to click the `Advanced Settings` link and disable Network Level Authentication. This reduces security slightly, so be sure to research the implications and assess your risk before exposing your computers over untrusted networks. My desktop is only available on my local network, or when I use the VPN I've created on my Unifi Edge Router.
 
-![Network Level Auth](/images/wsl/nla.png)
+![Network Level Auth](/static/images/wsl/nla.png)
 
 That's all you need to do on the host side. On the client, grab a Remote Desktop Client from whichever App Store or software source you usually use for downloads. On my iPad I searched for "Remote Desktop" in the App Store, and downloaded the official Microsoft remote desktop client.
 
@@ -75,23 +59,23 @@ netsh interface portproxy add v4tov4 listenport=2222 listenaddress=0.0.0.0 conne
 
 Finally I had to allow port 2222 through the Windows Firewall. The simplest way to do this is using the advanced firewall configuration.
 
-![Firewall Settings](/images/wsl/firewall.png)
+![Firewall Settings](/static/images/wsl/firewall.png)
 
 Then open the Advanced Firewall settings:
 
-![Advanced Firewall Settings](/images/wsl/advancefw.png)
+![Advanced Firewall Settings](/static/images/wsl/advancefw.png)
 
 Click "Inbound" in the left pane, then "New..." on the right pane. Choose "Port":
 
-![Port](/images/wsl/port.png)
+![Port](/static/images/wsl/port.png)
 
 Then specify port 2222:
 
-![Port 2222](/images/wsl/port2222.png)
+![Port 2222](/static/images/wsl/port2222.png)
 
 Specify "Allow"
 
-![Allow](/images/wsl/allow.png)
+![Allow](/static/mages/wsl/allow.png)
 
 Then uncheck "Public" when it asks which networks to apply these rules to. If you're on a public network, we don't want anybody trying to get ssh access anywhere.
 

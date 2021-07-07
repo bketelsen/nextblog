@@ -1,27 +1,16 @@
 ---
 title: Egg Bites
-layout: post
 date: '2019-09-13'
 aliases:
   - '/eggbites'
-images:
-  - '/images/eggbites.jpeg'
-cover:
-  image: 'eggbites.jpeg' # image path/url
-  alt: 'classroom' # alt text
-  caption: 'Eggbites in a muffin pan' # display caption under cover
-  relative: true # when using page bundles set this to true
+images: ['/static/images/eggbites.jpeg']
 summary: 'Quick Recipe for a home-made version of Starbucks Sous-vide Egg Bites'
-tags:
-  - 'eggs'
-  - 'recipe'
-categories:
-  - 'Recipes'
+tags: ['eggs', 'recipe']
 ---
 
 This post is a change from the usual technical content. I made my own Egg Bites this morning, inspired by the delicious ones I like to get at Starbucks.
 
-<!--more-->
+![egg bites](/static/images/eggbites.jpeg)
 
 ### Recipe
 

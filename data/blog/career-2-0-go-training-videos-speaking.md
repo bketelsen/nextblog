@@ -3,23 +3,15 @@ categories:
   - 'speaking'
   - 'training'
 date: '2016-06-18'
-cover:
-  image: 'mikael-kristenson-3aVlWP-7bg8-unsplash.jpg' # image path/url
-  alt: 'classroom' # alt text
-  caption: 'https://unsplash.com/photos/3aVlWP-7bg8' # display caption under cover
-  relative: true # when using page bundles set this to true
+images: ['mikael-kristenson-3aVlWP-7bg8-unsplash.jpg'] # image path/url
 aliases:
   - '/career-2-0-go-training-videos-speaking'
-tags:
-  - 'speaking'
-  - 'training'
+tags: ['speaking', 'training']
 title: 'Career 2.0 - Go Training, Videos, Speaking'
 summary: 'Career 2.0 - Go Training, Videos, Speaking'
 ---
 
 A week ago I decided to start a new journey. While I truly enjoyed working with Blake Mizerany and the team at [backplane](http://backplane.io), I felt I really had a passion for training and growing the Go community and I decided I owe it to myself to pursue it.
-
-<!--more-->
 
 ### Flashback: GopherCon 2016
 
@@ -56,7 +48,7 @@ I've also partnered with [O'Reilly](http://oreilly.com) to offer in-person train
 
 Finally, I'm booking corporate training classes for teams that want to learn about Go, Distributed Computing, and Orchestration technologies. I've got several companies lined up already and I'm very excited to share my [experience](/about/experience). If your team is looking to level-up on Go, Docker, or Kubernetes shoot me an [email](me@brianketelsen.com) and get on the schedule!
 
-#### Availability
+#### 2016 Availability
 
 Here's my calendar for the next several months:
 

@@ -1,25 +1,12 @@
 ---
-categories:
-  - 'windows'
-  - 'linux'
-  - 'i3'
 date: '2016-07-03'
-cover:
-  image: 'windows-on-top-1.png' # image path/url
-  alt: 'Windows and Linux' # alt text
-  caption: 'Windows and Linux' # display caption under cover
-  relative: true # when using page bundles set this to true
-aliases:
-  - '/i3-windows'
-tags:
-  - 'windows'
-  - 'linux'
-  - 'i3'
+images: ['windows-on-top-1.png']
+tags: ['windows', 'linux', 'i3']
 summary: 'Running i3 Window Manager on Bash For Windows'
 title: 'Running i3 Window Manager on Bash For Windows'
 ---
 
-That might be the longest title for a blog post ever, but it's kind of hard to describe what's going on here if you're not familiar with the latest updates from Microsoft land. <!--more-->Here's a quick refresher:
+That might be the longest title for a blog post ever, but it's kind of hard to describe what's going on here if you're not familiar with the latest updates from Microsoft land. Here's a quick refresher:
 
 - This spring Microsoft announced [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/about), also known as the Windows Subsystem for Linux. Read the post, the FAQ, etc in that link. I'll summarize: Microsoft wants to make Windows the best place for ALL developers to work. A lofty and ambitious goal, to say the least. Their crazy idea -- translate Linux system calls into NT Kernel calls using a small shim layer.
 
@@ -57,5 +44,5 @@ _This article was created in `neovim` for Linux, running on a `zsh` shell inside
 
 Screen shots:
 
-[i3 in MobaXTerm](/images/2017/09/i3.png)
-[i3 behind Windows](/images/2017/09/windows-on-top.png)
+[i3 in MobaXTerm](//static/images/2017/09/i3.png)
+[i3 behind Windows](/static/images/2017/09/windows-on-top.png)

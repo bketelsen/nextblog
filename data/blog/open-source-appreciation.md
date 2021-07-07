@@ -1,21 +1,12 @@
 ---
-categories:
-  - 'open source'
 date: '2015-05-11'
-cover:
-  image: 'william-white-TZCppMjaOHU-unsplash.jpg' # image path/url
-  alt: 'Fetch this, old dog :)' # alt text
-  caption: 'https://unsplash.com/photos/TZCppMjaOHU' # display caption under cover
-  relative: true # when using page bundles set this to true
-aliases:
-  - '/open-source-appreciation'
-tags:
-  - 'open source'
+images: ['william-white-TZCppMjaOHU-unsplash.jpg']
+tags: ['open-source']
 title: 'Open Source Appreciation'
 summary: 'Open Source Appreciation'
 ---
 
-I've never been shy about sharing my love for Open Source. I love creating things, and I love sharing them with others. One of my particular joys with Open Source Software, however, is finding new projects that excite me.<!--more-->
+I've never been shy about sharing my love for Open Source. I love creating things, and I love sharing them with others. One of my particular joys with Open Source Software, however, is finding new projects that excite me.
 
 I generally get excited about new OSS projects for two reasons:
 

@@ -1,25 +1,12 @@
 ---
 title: VS Code Remote Development
-layout: post
-date: '2019-05-02'
-aliases:
-  - '/vscode-remote-development'
-cover:
-  image: 'fpoHihXiMhg.jpg' # image path/url
-  alt: 'Laptop from Anywhere' # alt text
-  caption: 'https://unsplash.com/photos/fpoHihXiMhg' # display caption under cover
-  relative: true # when using page bundles set this to true
+images: ['fpoHihXiMhg.jpg']
 summary: 'Use VS Code against a remote computer or container'
-tags:
-  - 'vscode'
-  - 'development'
-categories:
-  - 'Development'
+tags: ['vscode', 'development']
+date: '2018-12-05'
 ---
 
 The [Visual Studio Code](https://code.visualstudio.com/) team just [announced](https://cda.ms/RN) perhaps the most eagerly anticipated feature yet. Remote editing.
-
-<!--more-->
 
 [Twitch Stream - Mac to SSH](https://www.twitch.tv/videos/419428954##)
 [Twitch Stream - WSL & Containers](https://www.twitch.tv/videos/419800747)
@@ -50,13 +37,13 @@ This is the `perfect` way to ship a pre-configured development environment for a
 
 Of the three, I will probably use this one the most. In fact I'm using it to write this blog post.
 
-![remote-ssh](/images/remotessh.png)
+![remote-ssh](/static/images/remotessh.png)
 
 The [remote-ssh](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) extension uses an SSH client on the host to communicate with a remote computer. If you have a beefy development machine (either locally or in the cloud), this is the perfect way to keep your development experience stable no matter what computer you're sitting at. No more syncing unfinished code between machines for me.
 
 The extension even does port forwarding over your ssh connection. When you start your website or service, it will forward that port for you to the local machine.
 
-![remote-menu](/images/remotemenu.png)
+![remote-menu](/static/images/remotemenu.png)
 
 I've been using the preview version of these three extensions for a few weeks now, and I couldn't be happier with the setup. I've used them from a Mac, from a Chromebook with Crostini, from Linux, and from Windows. It works equally well across all platforms.
 

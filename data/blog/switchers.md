@@ -1,29 +1,12 @@
 ---
-categories:
-  - 'hacks'
-  - 'i3'
-  - 'windows'
-  - 'linux'
-  - 'mac'
 date: '2016-11-07'
-cover:
-  image: 'getamac.png' # image path/url
-  alt: 'Get a Mac' # alt text
-  caption: 'Remember these?' # display caption under cover
-  relative: true # when using page bundles set this to true
-aliases:
-  - '/switchers'
-tags:
-  - 'hacks'
-  - 'i3'
-  - 'windows'
-  - 'linux'
-  - 'mac'
+images: ['getamac.png']
+tags: ['hacks', 'i3', 'windows', 'linux', 'mac']
 title: 'Switching - Irony and Operating systems'
 summary: 'Switching - Irony and Operating systems'
 ---
 
-TLDR; I've traded in my Mac on a Surface Pro. Here's why:<!--more-->
+TLDR; I've traded in my Mac on a Surface Pro. Here's why:
 
 I've been whining about Apple and the way they've ignored the power users for quite some time now. I've been using Linux for development for several years, and always wanted a way to run Linux as my primary OS. But the sad truth (for me) is that there are just some things that prevent me from using Linux as my full time operating system. Email might be the biggest, but there are other apps that are missing or just sub-par.
 

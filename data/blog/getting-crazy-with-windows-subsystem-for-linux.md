@@ -5,21 +5,13 @@ categories:
 date: '2017-12-13'
 aliases:
   - '/getting-crazy-with-windows-subsystem-for-linux'
-tags:
-  - 'wsl'
-  - 'development'
+tags: ['wsl', 'development']
 title: 'Getting Crazy with Windows Subsystem for Linux'
 summary: 'Getting Crazy with Windows Subsystem for Linux'
-cover:
-  image: 'startmenu.png' # image path/url
-  alt: 'start menu' # alt text
-  caption: 'Windows Start Menu' # display caption under cover
-  relative: true # when using page bundles set this to true
+images: ['startmenu.png']
 ---
 
 Lately I've been on a [mission](https://blog.gopheracademy.com/advent-2017/repeatable-isolated-dev-environments/) to separate my development environments by project, and by category (personal/work/Gophercon/etc). The writeup on the Gopheracademy blog describes a fun way to create an isolated container-based environment for each project by using LXD on Ubuntu.
-
-<!--more-->
 
 Last night I wondered to myself if there was a way to get a similar experience by manipulating [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/faq) somehow. That was a rabbit hole of searching, let me tell ya true.
 

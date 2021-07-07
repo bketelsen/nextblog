@@ -1,23 +1,12 @@
 ---
-categories:
-  - 'Development'
 date: '2016-06-13'
-cover:
-  image: 'pavel-anoshin-m-fvIeA9WZU-unsplash.jpg' # image path/url
-  alt: 'Fetch this, old dog :)' # alt text
-  caption: 'https://unsplash.com/photos/fvIeA9WZU' # display caption under cover
-  relative: true # when using page bundles set this to true
-aliases:
-  - '/old-dogs'
-tags:
-  - 'frontend'
-  - 'javascript'
-  - 'css'
+images: ['pavel-anoshin-m-fvIeA9WZU-unsplash.jpg']
+tags: ['frontend', 'javascript', 'css']
 title: 'Old Dogs, New Tricks, and Cognitive Bias'
 summary: 'Old Dogs, New Tricks, and Cognitive Bias'
 ---
 
-For 15 or more years I have told myself that I can't do frontend web work. I remember seeing a presentation from a co-worker on CSS in 2003 or so, and thinking it was just too complicated. I've always been the guy behind the scenes building the services that power the web, but never the one spending any time making them less ugly.<!--more-->
+For 15 or more years I have told myself that I can't do frontend web work. I remember seeing a presentation from a co-worker on CSS in 2003 or so, and thinking it was just too complicated. I've always been the guy behind the scenes building the services that power the web, but never the one spending any time making them less ugly.
 
 I know basic HTML -- from the roughly the [HTML 4.01 era](http://www.yourhtmlsource.com/starthere/historyofhtml.html). My excuse has always been that this is enough to create the sort of user interfaces I've been required to create. Simple admin screens, simple tabular reports, those sorts of things. I was able to avoid learning any more complex frontend skills over the years by simply shrugging and saying "I don't know frontend".
 

@@ -1,26 +1,12 @@
 ---
 title: Bash Helpers for Quick Installs
-layout: post
 date: '2020-08-14'
-aliases:
-  - '/install-func'
-cover:
-  image: '4pPzKfd6BEg.jpg' # image path/url
-  alt: 'Command Center' # alt text
-  caption: 'https://unsplash.com/photos/4pPzKfd6BEg' # display caption under cover
-  relative: true # when using page bundles set this to true
-
+images: ['4pPzKfd6BEg.jpg']
 summary: 'A quick helper function and directory layout for repeatable software installs.'
-tags:
-  - 'linux'
-  - 'open source'
-categories:
-  - 'Linux'
+tags: ['linux', 'open source']
 ---
 
 This bash setup is the latest evolution of my quest to make a new system install as fast as possible.
-
-<!--more-->
 
 ## Speed Up Software Installs with this Bash Trick
 

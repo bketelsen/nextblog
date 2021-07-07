@@ -1,25 +1,12 @@
 ---
-categories:
-  - 'Development'
-  - 'Cloud'
 date: '2017-07-31'
-aliases:
-  - '/gophercon-on-azure'
-tags:
-  - 'go'
-  - 'azure'
+tags: ['go', 'azure']
 title: 'Learn With Me: Moving Gophercon to Azure'
 summary: 'Learn With Me: Moving Gophercon to Azure'
-cover:
-  image: 'azure.png' # image path/url
-  alt: 'azure' # alt text
-  caption: 'Azure' # display caption under cover
-  relative: true # when using page bundles set this to true
+images: ['azure.png']
 ---
 
 I've recently taken on a new role at Microsoft as a Cloud Developer Advocate for Open Source projects on Azure. My purview is Go, Linux, Containers, and Kubernetes. While brainstorming ways to learn about all that Azure has to offer an idea occured to me: Why not move Gophercon over to Azure as a learning tool. I've decided to do just that and share my learnings along the way.
-
-<!--more-->
 
 This year we used [Buffalo](https://gobuffalo.io) and [Ponzu](https://ponzu-cms.org) as the main components of the website for Gophercon. Generally it was a huge improvement over our previous [hugo](https://gohugo.io) workflow, because Ponzu allowed us to get non-technical people contributing content. Hugo is amazing, but requiring `git` limits the people who can edit the site.
 

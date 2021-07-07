@@ -1,24 +1,12 @@
 ---
-categories:
-  - 'Development'
 date: '2016-05-04'
-cover:
-  image: 'cubicroot-xyz-rFNVqR2rJE0-unsplash.jpg' # image path/url
-  alt: 'Fetch this, old dog :)' # alt text
-  caption: 'https://unsplash.com/photos/rFNVqR2rJE0' # display caption under cover
-  relative: true # when using page bundles set this to true
-aliases:
-  - '/new-tricks'
-tags:
-  - 'frontend'
-  - 'javascript'
+images: ['cubicroot-xyz-rFNVqR2rJE0-unsplash.jpg']
+tags: ['frontend', 'javascript']
 title: 'New Tricks - notes as I learn modern front-end development'
 summary: 'New Tricks - notes as I learn modern front-end development'
 ---
 
 I promised [here](https://brianketelsen.com/opensource/) that I would document my progress learning frontend development. This isn't a book-length treatise on the subject, but I do have a few notes about my progress.
-
-<!--more-->
 
 It's been a little overwhelming going from zero to having an idea about what I'm doing. Many other people have mentioned it, so I won't belabor the point -- the Javascript ecosystem is huge and confusing. Seriously.
 
