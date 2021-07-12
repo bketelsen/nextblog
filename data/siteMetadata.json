@@ -15,5 +15,6 @@
   "facebook": "https://facebook.com/bketelsen",
   "youtube": "https://youtube.com/bketelsen",
   "linkedin": "https://www.linkedin.com/bketelsen",
-  "locale": "en-US"
+  "locale": "en-US",
+  "ogEndpoint": "https://ogbriandev.azurewebsites.net/api/ogimage"
 }

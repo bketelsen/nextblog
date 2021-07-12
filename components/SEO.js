@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import siteMetadata from '@/data/siteMetadata'
+import { useRouter } from 'next/router'
 
 export const PageSeo = ({ title, description }) => {
   const router = useRouter()
@@ -28,17 +28,12 @@ export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, ima
   const router = useRouter()
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
-  let imagesArr =
-    images.length === 0
-      ? [siteMetadata.socialBanner]
-      : typeof images === 'string'
-      ? [images]
-      : images
+  let imagesArr = [`${siteMetadata.ogEndpoint}?title=${title}`]
 
   const featuredImages = imagesArr.map((img) => {
     return {
       '@type': 'ImageObject',
-      url: `${siteMetadata.siteUrl}${img}`,
+      url: `${img}`,
     }
   })
 
@@ -98,7 +93,7 @@ export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, ima
         <meta name="twitter:site" content={siteMetadata.twitter} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={summary} />
-        <meta name="twitter:image" content={featuredImages[0].url} />
+        <meta name="twitter:image" content={`${siteMetadata.ogEndpoint}?title=${title}`} />
         {date && <meta property="article:published_time" content={publishedAt} />}
         {lastmod && <meta property="article:modified_time" content={modifiedAt} />}
         <link rel="canonical" href={`${siteMetadata.siteUrl}${router.asPath}`} />
