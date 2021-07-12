@@ -28,7 +28,8 @@ export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, ima
   const router = useRouter()
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
-  let imagesArr = [`${siteMetadata.ogEndpoint}?title=${title}`]
+  const encodedTitle = encodeURI(title)
+  let imagesArr = [`${siteMetadata.ogEndpoint}?title=${encodedTitle}`]
 
   const featuredImages = imagesArr.map((img) => {
     return {
