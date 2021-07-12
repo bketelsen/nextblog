@@ -3,7 +3,7 @@ title: Bash Helpers for Quick Installs
 date: '2020-08-14'
 images: ['4pPzKfd6BEg.jpg']
 summary: 'A quick helper function and directory layout for repeatable software installs.'
-tags: ['linux', 'open source']
+tags: ['linux', 'open source', 'terminal']
 ---
 
 This bash setup is the latest evolution of my quest to make a new system install as fast as possible.

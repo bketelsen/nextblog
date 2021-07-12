@@ -5,7 +5,7 @@ aliases:
   - '/eggbites'
 images: ['/static/images/eggbites.jpeg']
 summary: 'Quick Recipe for a home-made version of Starbucks Sous-vide Egg Bites'
-tags: ['eggs', 'recipe']
+tags: ['recipe']
 ---
 
 This post is a change from the usual technical content. I made my own Egg Bites this morning, inspired by the delicious ones I like to get at Starbucks.

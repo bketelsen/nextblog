@@ -1,7 +1,7 @@
 ---
 date: '2016-07-03'
 images: ['windows-on-top-1.png']
-tags: ['windows', 'linux', 'i3']
+tags: ['windows', 'linux']
 summary: 'Running i3 Window Manager on Bash For Windows'
 title: 'Running i3 Window Manager on Bash For Windows'
 ---

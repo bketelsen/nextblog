@@ -3,7 +3,7 @@ categories:
   - 'Development'
 date: '2016-09-19'
 images: ['nick-taylor-gDQ99yDy1M4-unsplash.jpg']
-tags: ['go', 'errors', 'concurrency']
+tags: ['go']
 title: 'sync.ErrGroup'
 summary: 'sync.ErrGroup'
 ---

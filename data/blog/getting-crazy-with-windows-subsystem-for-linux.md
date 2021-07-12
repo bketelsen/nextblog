@@ -5,7 +5,7 @@ categories:
 date: '2017-12-13'
 aliases:
   - '/getting-crazy-with-windows-subsystem-for-linux'
-tags: ['wsl', 'development']
+tags: ['wsl']
 title: 'Getting Crazy with Windows Subsystem for Linux'
 summary: 'Getting Crazy with Windows Subsystem for Linux'
 images: ['startmenu.png']

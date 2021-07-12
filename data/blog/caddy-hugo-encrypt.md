@@ -4,7 +4,7 @@ categories:
   - 'Infrastructure'
 date: '2015-11-11'
 images: ['markus-spiske-iar-afB0QQw-unsplash.jpg'] # image path/url
-tags: ['hugo', 'caddy', "let's encrypt"]
+tags: ['open-source']
 title: "Caddy and Let's Encrypt"
 summary: Caddy and Let's Encrypt
 ---
