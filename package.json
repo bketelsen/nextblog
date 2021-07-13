@@ -5,6 +5,7 @@
   "scripts": {
     "start": "next-remote-watch ./data",
     "dev": "next dev",
+    "new": "node scripts/compose.js",
     "build": "next build && node ./scripts/generate-sitemap",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
