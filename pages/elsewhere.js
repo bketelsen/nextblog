@@ -3,7 +3,7 @@ import siteMetadata from '@/data/siteMetadata'
 import AppearanceListLayout from '@/layouts/AppearanceListLayout'
 import { PageSeo } from '@/components/SEO'
 
-export const POSTS_PER_PAGE = 5
+export const POSTS_PER_PAGE = 3
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('elsewhere')
