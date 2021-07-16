@@ -20,7 +20,7 @@ export default function AppearanceLayout({ frontMatter, authorDetails, next, pre
   return (
     <SectionContainer>
       <BlogSeo
-        url={`${siteMetadata.siteUrl}/appearance/${slug}`}
+        url={`${siteMetadata.siteUrl}/elsewhere/${slug}`}
         authorDetails={authorDetails}
         {...frontMatter}
       />
