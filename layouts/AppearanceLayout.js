@@ -15,7 +15,7 @@ const discussUrl = (slug) =>
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function AppearanceLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, fileName, date, title, tags } = frontMatter
+  const { slug, fileName, date, title, tags, deck } = frontMatter
 
   return (
     <SectionContainer>
@@ -84,6 +84,11 @@ export default function AppearanceLayout({ frontMatter, authorDetails, next, pre
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
+              {deck && (
+                <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
+                  <Link href={`/decks/${deck}.html`}>View Slides</Link>
+                </div>
+              )}
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="noreferrer">
                   {'Discuss on Twitter'}
