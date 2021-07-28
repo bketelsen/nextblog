@@ -23,7 +23,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
 
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
 
           <link
             rel="preload"
@@ -37,6 +37,12 @@ class MyDocument extends Document {
             media="print"
             onLoad="this.media='all'"
           />
+          <script
+            async
+            defer
+            data-domain="brian.dev"
+            src="https://p.brian.dev/js/plausible.js"
+          ></script>
 
           <noscript>
             <link
