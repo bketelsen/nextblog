@@ -18,12 +18,7 @@ export const MDXComponents = {
 
 export default function App({ Component, pageProps }) {
   return (
-    <PlausibleProvider
-      domain="www.brian.dev"
-      customDomain="p.brian.dev"
-      trackOutboundLinks={true}
-      selfHosted={true}
-    >
+    <PlausibleProvider domain="www.brian.dev" trackOutboundLinks={true} selfHosted={true}>
       <ThemeProvider attribute="class">
         <Head>
           <meta content="width=device-width, initial-scale=1" name="viewport" />
