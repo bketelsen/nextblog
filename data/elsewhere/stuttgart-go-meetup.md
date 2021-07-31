@@ -1,6 +1,6 @@
 ---
 title: Stuttgart Go Meetup
-date: '2018-09-20'
+publish_date: '2018-09-20'
 summary: 'Presentation to Stuttgart Go Meetup about Go Modules'
 tags: ['go']
 deck: stuttgart-modules
