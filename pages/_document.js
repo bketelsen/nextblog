@@ -37,12 +37,6 @@ class MyDocument extends Document {
             media="print"
             onLoad="this.media='all'"
           />
-          <script
-            defer
-            data-api="https://brian.dev/api/event"
-            data-domain="brian.dev"
-            src="https://brian.dev/js/script.js"
-          ></script>
 
           <noscript>
             <link
