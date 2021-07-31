@@ -13,7 +13,7 @@ In this first post of (likely) a multi-part series I'm going to discuss how I am
 There are several contributing factors to the problem. Let's start with the obvious ones:
 
 - I'm a digital packrat
-- I'm a single parent of 3 (and therefore busy)
+- I'm a single parent of ~3~ 4 (and therefore busy)
 - I can be lazy sometimes
 - I have ADHD, and get easily sidetracked from things I intended to do
 

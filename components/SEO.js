@@ -24,10 +24,18 @@ export const PageSeo = ({ title, description }) => {
   )
 }
 
-export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, images = [] }) => {
+export const BlogSeo = ({
+  authorDetails,
+  title,
+  summary,
+  publish_date,
+  last_edit_date,
+  url,
+  images = [],
+}) => {
   const router = useRouter()
-  const publishedAt = new Date(date).toISOString()
-  const modifiedAt = new Date(lastmod || date).toISOString()
+  const publishedAt = new Date(publish_date).toISOString()
+  const modifiedAt = new Date(last_edit_date || publish_date).toISOString()
   const encodedTitle = encodeURI(title)
   let imagesArr = [`${siteMetadata.ogEndpoint}?title=${encodedTitle}`]
 
@@ -40,12 +48,10 @@ export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, ima
 
   let authorList
   if (authorDetails) {
-    authorList = authorDetails.map((author) => {
-      return {
-        '@type': 'Person',
-        name: author.name,
-      }
-    })
+    authorList = {
+      '@type': 'Person',
+      name: authorDetails.first_name + ' ' + authorDetails.last_name,
+    }
   } else {
     authorList = {
       '@type': 'Person',
@@ -95,8 +101,8 @@ export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, ima
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={summary} />
         <meta name="twitter:image" content={`${siteMetadata.ogEndpoint}?title=${title}`} />
-        {date && <meta property="article:published_time" content={publishedAt} />}
-        {lastmod && <meta property="article:modified_time" content={modifiedAt} />}
+        {publish_date && <meta property="article:published_time" content={publishedAt} />}
+        {last_edit_date && <meta property="article:modified_time" content={modifiedAt} />}
         <link rel="canonical" href={`${siteMetadata.siteUrl}${router.asPath}`} />
         <script
           type="application/ld+json"

@@ -38,10 +38,10 @@ class MyDocument extends Document {
             onLoad="this.media='all'"
           />
           <script
-            async
             defer
+            data-api="https://brian.dev/api/event"
             data-domain="brian.dev"
-            src="https://p.brian.dev/js/plausible.js"
+            src="https://brian.dev/js/script.js"
           ></script>
 
           <noscript>
