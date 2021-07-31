@@ -38,16 +38,4 @@ module.exports = withBundleAnalyzer({
 
     return config
   },
-  async rewrites() {
-    return [
-      {
-        source: '/js/script.js',
-        destination: 'https://p.brian.dev/js/plausible.js',
-      },
-      {
-        source: '/api/event', // Or '/api/event/' if you have `trailingSlash: true` in this config
-        destination: 'https://p.brian.dev/api/event',
-      },
-    ]
-  },
 })
