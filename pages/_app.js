@@ -19,7 +19,7 @@ export const MDXComponents = {
 export default function App({ Component, pageProps }) {
   return (
     <PlausibleProvider
-      domain="brian.dev"
+      domain="www.brian.dev"
       customDomain="p.brian.dev"
       trackOutboundLinks={true}
       selfHosted={true}
