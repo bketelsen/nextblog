@@ -4,6 +4,19 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=G-Y15RYE6XQH`} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Y15RYE6XQH', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
           <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
           <link
             rel="icon"
