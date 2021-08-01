@@ -1,18 +1,19 @@
-import { getAllPostsFrontmatter, getPostByID } from '@/lib/apollo'
+import { getAllImages, getAllPostsFrontmatter, getImageByIDSync, getPostByID } from '@/lib/apollo'
 
 import CustomLink from '@/components/Link'
-import { MDXRemote } from 'next-mdx-remote'
+import Image from 'next/image'
 import PageTitle from '@/components/PageTitle'
 import PostLayout from '@/layouts/PostLayout'
 import Pre from '@/components/Pre'
+import ReactMarkdown from 'react-markdown'
 import codeTitles from '@/lib/remark-code-title'
 import fs from 'fs'
 import generateRss from '@/lib/generate-rss'
-import { serialize } from 'next-mdx-remote/serialize'
 
 const visit = require('unist-util-visit')
 
 const DEFAULT_LAYOUT = 'PostLayout'
+var imageMap = {}
 
 export const MDXComponents = {
   a: CustomLink,
@@ -32,7 +33,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const allImages = await getAllImages()
+  for (const img of allImages) {
+    imageMap[img.id] = img
+  }
   const allPosts = await getAllPostsFrontmatter()
+
   const postIndex = allPosts.findIndex((post) => post.id === params.slug.join('/'))
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
@@ -41,17 +47,11 @@ export async function getStaticProps({ params }) {
   // rss
   const rss = generateRss(allPosts)
   fs.writeFileSync('./public/feed.xml', rss)
-  const mdxSource = await serialize(post.body, {
-    mdxOptions: {
-      remarkPlugins: remarkPlugins,
-      rehypePlugins: rehypePlugins,
-    },
-  })
 
-  return { props: { post, mdxSource, prev, next } }
+  return { props: { post, images: imageMap, prev, next } }
 }
 
-export default function Blog({ post, mdxSource, prev, next }) {
+export default function Blog({ post, images, prev, next }) {
   const { body } = post
 
   return (
@@ -59,7 +59,32 @@ export default function Blog({ post, mdxSource, prev, next }) {
       {post.draft !== true ? (
         <PostLayout post={post} next={next} prev={prev}>
           <div className="wrapper">
-            <MDXRemote {...mdxSource} components={MDXComponents} />
+            <ReactMarkdown
+              components={{
+                // eslint-disable-next-line react/display-name
+                p: ({ node, children }) => {
+                  if (node.children[0].tagName === 'img') {
+                    const image = node.children[0]
+                    const { src } = image.properties
+                    if (src.startsWith('/')) {
+                      const id = src.replace('/static/images/', '').split('.', 1)[0]
+                      const i = images[id]
+                      return (
+                        <div className="image">
+                          <Image src={src} alt={i.alt} width={i.width} height={i.height} />
+                        </div>
+                      )
+                    }
+                  }
+                  // Return default child if it's not an image
+                  return <p>{children}</p>
+                },
+              }}
+              rehypePlugins={rehypePlugins}
+              remarkPlugins={remarkPlugins}
+            >
+              {post.body}
+            </ReactMarkdown>
           </div>
         </PostLayout>
       ) : (
