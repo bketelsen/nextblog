@@ -71,7 +71,7 @@ export default function Blog({ post, images, prev, next }) {
                       const i = images[id]
                       return (
                         <div className="image">
-                          <Image src={src} alt={i.alt} width={i.width} height={i.height} />
+                          <Image src={src} alt={i.alt || id} width={i.width} height={i.height} />
                         </div>
                       )
                     }

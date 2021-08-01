@@ -27,7 +27,7 @@ export const PageSeo = ({ title, description }) => {
 export const BlogSeo = ({
   authorDetails,
   title,
-  summary,
+  excerpt,
   publish_date,
   last_edit_date,
   url,
@@ -79,7 +79,7 @@ export const BlogSeo = ({
         url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
       },
     },
-    description: summary,
+    description: excerpt,
   }
 
   return (
@@ -87,11 +87,11 @@ export const BlogSeo = ({
       <Head>
         <title>{`${title}`}</title>
         <meta name="robots" content="follow, index" />
-        <meta name="description" content={summary} />
+        <meta name="description" content={excerpt} />
         <meta property="og:url" content={`${siteMetadata.siteUrl}${router.asPath}`} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content={siteMetadata.title} />
-        <meta property="og:description" content={summary} />
+        <meta property="og:description" content={excerpt} />
         <meta property="og:title" content={title} />
         {featuredImages.map((img) => (
           <meta property="og:image" content={img.url} key={img.url} />
@@ -99,7 +99,7 @@ export const BlogSeo = ({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content={siteMetadata.twitter} />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={summary} />
+        <meta name="twitter:description" content={excerpt} />
         <meta name="twitter:image" content={`${siteMetadata.ogEndpoint}?title=${title}`} />
         {publish_date && <meta property="article:published_time" content={publishedAt} />}
         {last_edit_date && <meta property="article:modified_time" content={modifiedAt} />}
