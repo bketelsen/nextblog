@@ -1,8 +1,10 @@
 import { getAllPostsFrontmatter, getPostByID } from '@/lib/apollo'
 
+import CustomLink from '@/components/Link'
 import { MDXRemote } from 'next-mdx-remote'
 import PageTitle from '@/components/PageTitle'
 import PostLayout from '@/layouts/PostLayout'
+import Pre from '@/components/Pre'
 import codeTitles from '@/lib/remark-code-title'
 import fs from 'fs'
 import generateRss from '@/lib/generate-rss'
@@ -11,6 +13,11 @@ import { serialize } from 'next-mdx-remote/serialize'
 const visit = require('unist-util-visit')
 
 const DEFAULT_LAYOUT = 'PostLayout'
+
+export const MDXComponents = {
+  a: CustomLink,
+  pre: Pre,
+}
 
 export async function getStaticPaths() {
   const posts = await getAllPostsFrontmatter()
@@ -36,6 +43,7 @@ export async function getStaticProps({ params }) {
   fs.writeFileSync('./public/feed.xml', rss)
   const mdxSource = await serialize(post.body, {
     mdxOptions: {
+      remarkPlugins: remarkPlugins,
       rehypePlugins: rehypePlugins,
     },
   })
@@ -51,7 +59,7 @@ export default function Blog({ post, mdxSource, prev, next }) {
       {post.draft !== true ? (
         <PostLayout post={post} next={next} prev={prev}>
           <div className="wrapper">
-            <MDXRemote {...mdxSource} />
+            <MDXRemote {...mdxSource} components={MDXComponents} />
           </div>
         </PostLayout>
       ) : (
