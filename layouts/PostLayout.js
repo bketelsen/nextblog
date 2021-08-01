@@ -1,8 +1,8 @@
+import { BlogSeo } from '@/components/SEO'
+import Image from '@/components/Image'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
-import { BlogSeo } from '@/components/SEO'
-import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 
@@ -115,7 +115,7 @@ export default function PostLayout({ post, next, prev, children }) {
                           Previous Article
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
+                          <Link href={`/blog/${prev.id}`}>{prev.title}</Link>
                         </div>
                       </div>
                     )}
@@ -125,7 +125,7 @@ export default function PostLayout({ post, next, prev, children }) {
                           Next Article
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/blog/${next.slug}`}>{next.title}</Link>
+                          <Link href={`/blog/${next.id}`}>{next.title}</Link>
                         </div>
                       </div>
                     )}

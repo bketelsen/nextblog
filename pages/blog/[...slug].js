@@ -1,11 +1,12 @@
-import fs from 'fs'
-import { serialize } from 'next-mdx-remote/serialize'
+import { getAllPostsFrontmatter, getPostByID } from '@/lib/apollo'
+
 import { MDXRemote } from 'next-mdx-remote'
 import PageTitle from '@/components/PageTitle'
-import generateRss from '@/lib/generate-rss'
-import { getAllPostsFrontmatter, getPostByID } from '@/lib/apollo'
 import PostLayout from '@/layouts/PostLayout'
 import codeTitles from '@/lib/remark-code-title'
+import fs from 'fs'
+import generateRss from '@/lib/generate-rss'
+import { serialize } from 'next-mdx-remote/serialize'
 
 const visit = require('unist-util-visit')
 
