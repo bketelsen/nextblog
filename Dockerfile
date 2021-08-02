@@ -3,8 +3,8 @@ FROM bketelsen/bkml
 
 # Server port to listen
 ENV PORT 8080
-COPY data /data
-WORKDIR /data
+COPY . /app
+WORKDIR /app/data
 # Drop privileges for non-UID mapped environments
 USER nobody
 # Run the entrypoint command by default when the container starts.
