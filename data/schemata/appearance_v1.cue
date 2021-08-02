@@ -15,6 +15,7 @@
 		featured:          bool | *false
     host_name:         string @template("Gophercon")
     host_url:          string @template("https://gophercon.com")
+	profile:		   string @relationship(Profile)
 		appearance_date:   string @template("2020-01-01")
 		image?:            string @relationship(Image)
     event_url?:        string @template("https://www.gophercon.com/gc21/talks/bketelsen")
