@@ -1,5 +1,5 @@
 import { BlogSeo } from '@/components/SEO'
-import Image from '@/components/Image'
+import Image from 'next/image'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
