@@ -3,7 +3,7 @@ first_name: Brian
 last_name: Ketelsen
 company: Microsoft
 title: Principal Cloud Developer Advocate
-avatar: main/bri
+image: main/bri
 twitter: bketelsen
 github: bketelsen
 youtube: bketelsen
