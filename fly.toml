@@ -12,7 +12,7 @@ kill_timeout = 5
   auto_rollback = true
 
 [[statics]]
-  guest_path = "/data/static"
+  guest_path = "/public/static"
   url_prefix = "/static"
 
 [[services]]
