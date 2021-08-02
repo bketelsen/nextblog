@@ -1,8 +1,7 @@
-import { getAllPostsFrontmatter, getPostByID } from '@/lib/apollo'
-
 import ListLayout from '@/layouts/ListLayout'
 import { POSTS_PER_PAGE } from '../../blog'
 import { PageSeo } from '@/components/SEO'
+import { getAllPostsFrontmatter } from '@/lib/apollo'
 import siteMetadata from '@/data/siteMetadata'
 
 export async function getStaticPaths() {

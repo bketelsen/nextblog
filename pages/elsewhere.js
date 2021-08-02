@@ -1,12 +1,12 @@
-import { getAllFilesFrontMatter } from '@/lib/mdx'
-import siteMetadata from '@/data/siteMetadata'
 import AppearanceListLayout from '@/layouts/AppearanceListLayout'
 import { PageSeo } from '@/components/SEO'
+import { getAllAppearanceFrontmatter } from '@/lib/apollo'
+import siteMetadata from '@/data/siteMetadata'
 
 export const POSTS_PER_PAGE = 3
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('elsewhere')
+  const posts = await getAllAppearanceFrontmatter()
   const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
   const pagination = {
     currentPage: 1,

@@ -1,4 +1,4 @@
-import { getAllImages, getAllPostsFrontmatter, getImageByIDSync, getPostByID } from '@/lib/apollo'
+import { getAllImages, getAllPostsFrontmatter, getPostByID } from '@/lib/apollo'
 
 import CustomLink from '@/components/Link'
 import Image from 'next/image'
