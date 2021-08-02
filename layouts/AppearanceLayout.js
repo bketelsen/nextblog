@@ -56,9 +56,9 @@ export default function AppearanceLayout({ frontMatter, authorDetails, next, pre
                 <ul className="flex justify-center space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8">
                   {authorDetails.map((author) => (
                     <li className="flex items-center space-x-2" key={author.name}>
-                      {author.avatar && (
+                      {author.image && (
                         <Image
-                          src={author.avatar}
+                          src={author.image.file_name}
                           width="38px"
                           height="38px"
                           alt="avatar"

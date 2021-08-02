@@ -52,9 +52,9 @@ export default function PostLayout({ post, next, prev, children }) {
                 <ul className="flex justify-center space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8">
                   <>
                     <li className="flex items-center space-x-2" key={post.profile.first_name}>
-                      {post.profile.avatar && (
+                      {post.profile.image && (
                         <Image
-                          src={`/static/${post.profile.avatar.file_name}`}
+                          src={`/static/${post.profile.image.file_name}`}
                           width="38px"
                           height="38px"
                           alt="avatar"

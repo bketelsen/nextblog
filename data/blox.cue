@@ -3,5 +3,5 @@
   schemata_dir: "schemata"
   build_dir: ".build"
   template_dir: "tpl"
-  static_dir: "../public/static"
+  static_dir: "static"
 }

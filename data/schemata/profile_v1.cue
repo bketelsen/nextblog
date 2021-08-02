@@ -16,7 +16,7 @@
 		company?:   string @template("CueBlox")
 		title?:     string @template("Cue Slinger")
 		body?:      string @template("☕️ Required")
-		image?:    string @relationship(Image)
+		image?:     string @relationship(Image)
     twitter?:   string @template("bketelsen")
     github?:   string @template("bketelsen")
     youtube?:   string @template("bketelsen")
