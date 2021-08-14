@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 class MyDocument extends Document {
   render() {
     return (
@@ -36,7 +36,6 @@ class MyDocument extends Document {
             media="print"
             onLoad="this.media='all'"
           />
-          <script defer data-domain="brian.dev" src="https://plausible.io/js/plausible.js"></script>
 
           <noscript>
             <link
