@@ -28,13 +28,19 @@ export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, ima
   const router = useRouter()
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
-  const encodedTitle = encodeURI(title)
-  let imagesArr = [`${siteMetadata.ogEndpoint}?title=${encodedTitle}`]
+  let imagesArr =
+    images.length === 0
+      ? [siteMetadata.socialBanner]
+      : typeof images === 'string'
+      ? // eslint-disable-next-line prettier/prettier
+        [images]
+      : // eslint-disable-next-line prettier/prettier
+        images
 
   const featuredImages = imagesArr.map((img) => {
     return {
       '@type': 'ImageObject',
-      url: `${img}`,
+      url: `${siteMetadata.siteUrl}${img}`,
     }
   })
 
@@ -94,7 +100,7 @@ export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, ima
         <meta name="twitter:site" content={siteMetadata.twitter} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={summary} />
-        <meta name="twitter:image" content={`${siteMetadata.ogEndpoint}?title=${title}`} />
+        <meta name="twitter:image" content={featuredImages[0].url} />
         {date && <meta property="article:published_time" content={publishedAt} />}
         {lastmod && <meta property="article:modified_time" content={modifiedAt} />}
         <link rel="canonical" href={`${siteMetadata.siteUrl}${router.asPath}`} />

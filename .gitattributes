@@ -1,6 +1,3 @@
-## Source: https://github.com/alexkaratarakis/gitattributes
-## Modified * text=auto to * text eol=lf to force LF endings.
-
 ## GITATTRIBUTES FOR WEB PROJECTS
 #
 # These settings are for any web project.
@@ -13,17 +10,17 @@
 ######################################################################
 
 # Auto detect
-##   Force LF line endings automatically for files detected as
+##   Handle line endings automatically for files detected as
 ##   text and leave all files detected as binary untouched.
 ##   This will handle all files NOT defined below.
-*                 text eol=lf
+*                 text=auto
 
 # Source code
 *.bash            text eol=lf
 *.bat             text eol=crlf
 *.cmd             text eol=crlf
 *.coffee          text
-*.css             text
+*.css             text diff=css
 *.htm             text diff=html
 *.html            text diff=html
 *.inc             text
@@ -58,12 +55,12 @@ Dockerfile        text
 
 # Documentation
 *.ipynb           text
-*.markdown        text
-*.md              text
-*.mdwn            text
-*.mdown           text
-*.mkd             text
-*.mkdn            text
+*.markdown        text diff=markdown
+*.md              text diff=markdown
+*.mdwn            text diff=markdown
+*.mdown           text diff=markdown
+*.mkd             text diff=markdown
+*.mkdn            text diff=markdown
 *.mdtxt           text
 *.mdtext          text
 *.txt             text
@@ -94,6 +91,7 @@ TODO              text
 *.mustache        text
 *.njk             text
 *.phtml           text
+*.svelte          text
 *.tmpl            text
 *.tpl             text
 *.twig            text
@@ -109,7 +107,11 @@ TODO              text
 .gitconfig        text
 .htaccess         text
 *.lock            text -diff
+package.json      text eol=lf
 package-lock.json text -diff
+pnpm-lock.yaml    text eol=lf -diff
+.prettierrc       text
+yarn.lock         text -diff
 *.toml            text
 *.yaml            text
 *.yml             text
@@ -135,6 +137,7 @@ Procfile          text
 *.jxr             binary
 *.pdf             binary
 *.png             binary
+*.PNG             binary
 *.psb             binary
 *.psd             binary
 # SVG treated as an asset (binary) by default.
@@ -163,6 +166,7 @@ Procfile          text
 *.as              binary
 *.asf             binary
 *.asx             binary
+*.avi             binary
 *.fla             binary
 *.flv             binary
 *.m4v             binary

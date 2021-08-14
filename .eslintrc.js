@@ -6,7 +6,6 @@ module.exports = {
     node: true,
     es6: true,
   },
-  ignorePatterns: ['/public'],
   extends: [
     'eslint:recommended',
     'plugin:jsx-a11y/recommended',
