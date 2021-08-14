@@ -36,12 +36,7 @@ class MyDocument extends Document {
             media="print"
             onLoad="this.media='all'"
           />
-          <script
-            async
-            defer
-            data-domain="brian.dev"
-            src="https://p.brian.dev/js/plausible.js"
-          ></script>
+          <script defer data-domain="brian.dev" src="https://plausible.io/js/plausible.js"></script>
 
           <noscript>
             <link
