@@ -58,6 +58,7 @@ async function ls(p) {
           'static',
           'images',
           'og',
+          path.basename(p),
           formatSlug(dirent.name) + '.png'
         )
         fs.writeFileSync(imagePath, buffer)

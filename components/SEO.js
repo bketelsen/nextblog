@@ -19,7 +19,7 @@ export const PageSeo = ({ title, description }) => {
       <meta name="twitter:site" content={siteMetadata.twitter} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${siteMetadata.siteUrl}${siteMetadata.socialBanner}`} />
+      <meta name="twitter:image" content={`${siteMetadata.ogEndpoint}?title=${title}`} />
     </Head>
   )
 }
@@ -32,10 +32,8 @@ export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, ima
     images.length === 0
       ? [siteMetadata.socialBanner]
       : typeof images === 'string'
-      ? // eslint-disable-next-line prettier/prettier
-        [images]
-      : // eslint-disable-next-line prettier/prettier
-        images
+      ? [images]
+      : images
 
   const featuredImages = imagesArr.map((img) => {
     return {

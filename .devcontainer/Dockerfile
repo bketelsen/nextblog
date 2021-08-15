@@ -14,3 +14,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 
 # [Optional] Uncomment if you want to install more global node modules
 # RUN su node -c "npm install -g <your-package-list-here>"
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+	&& apt-get -y install --no-install-recommends wget curl
+
+RUN wget https://github.com/bketelsen/azureog/releases/download/v0.0.4/azureog_0.0.4_linux_amd64.deb && dpkg -i azureog_0.0.4_linux_amd64.deb 
