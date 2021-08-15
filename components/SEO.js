@@ -24,7 +24,16 @@ export const PageSeo = ({ title, description }) => {
   )
 }
 
-export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, images = [] }) => {
+export const BlogSeo = ({
+  authorDetails,
+  title,
+  summary,
+  date,
+  lastmod,
+  url,
+  slug,
+  images = [],
+}) => {
   const router = useRouter()
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
@@ -91,6 +100,8 @@ export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, ima
         <meta property="og:site_name" content={siteMetadata.title} />
         <meta property="og:description" content={summary} />
         <meta property="og:title" content={title} />
+
+        <meta property="og:image" content={`/static/images/og/blog/${slug}.png`} key={slug} />
         {featuredImages.map((img) => (
           <meta property="og:image" content={img.url} key={img.url} />
         ))}
@@ -98,7 +109,8 @@ export const BlogSeo = ({ authorDetails, title, summary, date, lastmod, url, ima
         <meta name="twitter:site" content={siteMetadata.twitter} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={summary} />
-        <meta name="twitter:image" content={featuredImages[0].url} />
+        <meta name="twitter:image" content={`/static/images/og/blog/${slug}.png`} />
+
         {date && <meta property="article:published_time" content={publishedAt} />}
         {lastmod && <meta property="article:modified_time" content={modifiedAt} />}
         <link rel="canonical" href={`${siteMetadata.siteUrl}${router.asPath}`} />
