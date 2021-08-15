@@ -1,7 +1,7 @@
+import AppearanceListLayout from '@/layouts/AppearanceListLayout'
+import { PageSEO } from '@/components/SEO'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import siteMetadata from '@/data/siteMetadata'
-import AppearanceListLayout from '@/layouts/AppearanceListLayout'
-import { PageSeo } from '@/components/SEO'
 
 export const POSTS_PER_PAGE = 3
 
@@ -19,7 +19,7 @@ export async function getStaticProps() {
 export default function Elsewhere({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
-      <PageSeo
+      <PageSEO
         title={`Appearances and Events - ${siteMetadata.author}`}
         description={siteMetadata.description}
       />

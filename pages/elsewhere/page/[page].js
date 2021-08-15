@@ -1,8 +1,8 @@
-import { PageSeo } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
 import AppearanceListLayout from '@/layouts/AppearanceListLayout'
 import { POSTS_PER_PAGE } from '../../elsewhere'
+import { PageSEO } from '@/components/SEO'
+import { getAllFilesFrontMatter } from '@/lib/mdx'
+import siteMetadata from '@/data/siteMetadata'
 
 export async function getStaticPaths() {
   const totalPosts = await getAllFilesFrontMatter('elsewhere')
@@ -44,7 +44,7 @@ export async function getStaticProps(context) {
 export default function PostPage({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
-      <PageSeo title={siteMetadata.title} description={siteMetadata.description} />
+      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <AppearanceListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
