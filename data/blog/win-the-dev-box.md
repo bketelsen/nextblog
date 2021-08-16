@@ -1,7 +1,7 @@
 ---
 title: Windows for Open Source Development
 date: '2020-02-24'
-images: ['/images/h3GAGi5tXMU.jpg']
+images: ['/static/images/h3GAGi5tXMU.jpg']
 summary: 'A Series on Using Windows for Open Source Development'
 tags: ['windows', 'linux', 'open source', '30daywslchallenge']
 ---

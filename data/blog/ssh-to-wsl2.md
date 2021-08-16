@@ -1,7 +1,7 @@
 ---
 title: Remote SSH Connections to WSL2
 date: '2020-03-03'
-images: ['cdc-_XLJy3h77cw-unsplash.jpg']
+images: ['/static/images/ssh-to-wsl2/cdc-_XLJy3h77cw-unsplash.jpg']
 summary: 'A Series on Using Windows for Open Source Development'
 tags: ['windows', 'linux', 'open source', '30daywslchallenge']
 ---
