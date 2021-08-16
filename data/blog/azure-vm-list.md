@@ -11,4 +11,4 @@ I needed this today. To get a list of the different Virtual Machine base images(
 az vm image list --all --output table
 ```
 
-Reference Information [https://cda.ms/1yM]
+[Reference Information](https://cda.ms/1yM)
