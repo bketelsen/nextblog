@@ -1,7 +1,7 @@
 ---
 title: Byobu on WSL
 date: '2019-10-09'
-images: ['mbLr6NEatMI.jpg'] # image path/url
+images: ['/static/images/mbLr6NEatMI.jpg'] # image path/url
 summary: 'Make your life easier with Byobu'
 tags: ['terminal']
 ---

@@ -6,7 +6,7 @@ import SectionContainer from '@/components/SectionContainer'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 
-const editUrl = (fileName) => `${siteMetadata.siteRepo}/elsewhere/master/data/elsewhere/${fileName}`
+const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/elsewhere/${fileName}`
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `${siteMetadata.siteUrl}/elsewhere/${slug}`

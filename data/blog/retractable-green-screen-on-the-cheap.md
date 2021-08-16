@@ -3,7 +3,7 @@ date: '2018-10-06'
 tags: ['hacks', 'video']
 title: 'Retractable Green Screen On the Cheap'
 summary: 'Retractable Green Screen On the Cheap'
-images: ['IMG_1380-1.jpeg']
+images: ['/static/images/retractable-green-screen-on-the-cheap/IMG_1380-1.jpeg']
 ---
 
 Quick post to write up how I built a retractable green screen mount on my wall for not much money.

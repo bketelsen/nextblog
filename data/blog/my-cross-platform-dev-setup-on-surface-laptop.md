@@ -1,6 +1,6 @@
 ---
 date: '2017-09-29'
-images: ['desktop.png'] # image path/url
+images: ['/static/images/my-cross-platform-dev-setup-on-surface-laptop/desktop.png'] # image path/url
 tags: ['development', 'linux', 'windows']
 title: 'My Cross-Platform Dev Setup on Surface Laptop'
 summary: 'My Cross-Platform Dev Setup on Surface Laptop'

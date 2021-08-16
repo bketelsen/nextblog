@@ -2,7 +2,7 @@
 title: Hello waSCC
 
 date: '2020-02-25'
-images: ['h3GAGi5tXMU.jpg'] # image path/url
+images: ['/static/images/hello-wascc/h3GAGi5tXMU.jpg'] # image path/url
 summary: 'Web Assembly on the Server'
 tags: ['open source', '30daywslchallenge', 'wasm']
 ---
