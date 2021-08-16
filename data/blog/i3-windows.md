@@ -44,5 +44,5 @@ _This article was created in `neovim` for Linux, running on a `zsh` shell inside
 
 Screen shots:
 
-[i3 in MobaXTerm](//static/images/2017/09/i3.png)
+[i3 in MobaXTerm](/static/images/2017/09/i3.png)
 [i3 behind Windows](/static/images/2017/09/windows-on-top.png)

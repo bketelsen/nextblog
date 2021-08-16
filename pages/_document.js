@@ -4,22 +4,44 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/static/favicons/favicon-32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/static/favicons/favicon-16x16.png"
-          />
-          <link rel="manifest" href="/static/favicons/site.webmanifest" />
-          <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#5bbad5" />
-          <meta name="msapplication-TileColor" content="#000000" />
+          <meta name="theme-color" content="red" />
+          <meta name="mobile-web-app-capable" content="yes" />
+
+          <meta name="apple-mobile-web-app-title" content="Application Title" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+          <meta name="msapplication-navbutton-color" content="red" />
+          <meta name="msapplication-TileColor" content="red" />
+          <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
+          <meta name="msapplication-config" content="browserconfig.xml" />
+
+          <meta name="application-name" content="Application Name" />
+          <meta name="msapplication-tooltip" content="Tooltip Text" />
+          <meta name="msapplication-starturl" content="/" />
+
+          <meta name="msapplication-tap-highlight" content="no" />
+
+          <meta name="full-screen" content="yes" />
+          <meta name="browsermode" content="application" />
+
+          <meta name="nightmode" content="enable/disable" />
+
+          <meta name="layoutmode" content="fitscreen/standard" />
+
+          <meta name="imagemode" content="force" />
+
+          <meta name="screen-orientation" content="portrait" />
+
+          <link href="/icons/icon-72x72.png" rel="icon" type="image/png" sizes="72x72" />
+          <link href="/icons/icon-96x96.png" rel="icon" type="image/png" sizes="96x96" />
+          <link href="/icons/icon-128x128.png" rel="icon" type="image/png" sizes="128x128" />
+          <link href="/icons/icon-144x144.png" rel="icon" type="image/png" sizes="144x144" />
+          <link href="/icons/icon-192x192.png" rel="icon" type="image/png" sizes="192x192" />
+
+          <link href="/icons/icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+
+          <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
           <link
