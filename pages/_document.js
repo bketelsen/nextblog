@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+
 import { GoogleFonts } from 'nextjs-google-fonts/GoogleFonts'
 
 class MyDocument extends Document {
@@ -8,19 +9,19 @@ class MyDocument extends Document {
         <Head>
           {GoogleFonts()}
 
-          <meta name="theme-color" content="red" />
+          <meta name="theme-color" content="blue" />
           <meta name="mobile-web-app-capable" content="yes" />
 
-          <meta name="apple-mobile-web-app-title" content="Application Title" />
+          <meta name="apple-mobile-web-app-title" content="Brian Ketelsen" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
-          <meta name="msapplication-navbutton-color" content="red" />
+          <meta name="msapplication-navbutton-color" content="blue" />
           <meta name="msapplication-TileColor" content="red" />
           <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
           <meta name="msapplication-config" content="browserconfig.xml" />
 
-          <meta name="application-name" content="Application Name" />
+          <meta name="application-name" content="Brian Ketelsen" />
           <meta name="msapplication-tooltip" content="Tooltip Text" />
           <meta name="msapplication-starturl" content="/" />
 
