@@ -24,7 +24,7 @@ I created a folder on my `C:\` drive called `home`. I then shared the directory 
 
 The first thing I tried doing was changing my `/etc/fstab` entry for the mounted share to mount it at `/home/bketelsen`. It worked, but of course it replaced my existing home directory with the mounted one. I reversed my change in `fstab` and made a new mountpoint at `/home/bketelsen2`. I mounted the Windows share there, then used `rsync` to copy my old WSL-only home into the mounted directory:
 
-```
+```bash
 $> rsync -azvh /home/bketelsen/ /home/bketelsen2
 ```
 
@@ -42,19 +42,19 @@ That's pretty slick! Now all I needed to do was make that my $HOME and I'd be se
 
 I pondered a bit and realized that I was dealing with Linux, and mounting the share at `/home/bketelsen` was only one way to solve the problem. The other way is to change my home directory's location in the Linux user database. Specifically, using the `usermod` command:
 
-```
+```bash
 sudo usermod -d /mnt/c/home bketelsen
 ```
 
 This is the right command, but it fails because the WSL process is spawned as a `bash` process started by my user, `bketelsen`. There can be no processes running as `bketelsen` when you make the `usermod` change, so that approach wouldn't work. I searched for ways to launch WSL directly as the root user, but in the middle of that search I remembered that the home directory is actually specified in `/etc/passwd`:
 
-```
+```bash
 bketelsen:x:1000:1000:,,,:/home/bketelsen:/bin/bash
 ```
 
 YES! I edited this file to reflect my new desired $HOME directory:
 
-```
+```bash
 bketelsen:x:1000:1000:,,,:/mnt/c/home:/bin/bash
 ```
 
@@ -80,7 +80,7 @@ This is extremely cool. I set up my Go development environment on the Windows si
 
 Here's the contents of my `/etc/wsl.conf` for your perusal:
 
-```
+```toml
 # Enable extra metadata options by default
 [automount]
 enabled = true

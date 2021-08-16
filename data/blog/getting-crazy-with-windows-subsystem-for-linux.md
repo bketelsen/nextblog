@@ -21,7 +21,7 @@ After some research, it turns out that the WSL management API is available in th
 
 I downloaded `LxRunOffline` and read the [wiki](https://github.com/DDoSolitary/LxRunOffline/wiki/Ubuntu), which has links to the Ubuntu root filesystem that is installed during a regular WSL install. Following their instructions, I downloaded the rootfs, put it next to the `LxRunOffline` binary, and installed _another_ copy of Ubuntu as a new WSL instance.
 
-```
+```bash
 LxRunOffline 2.1.1
 Copyright (C) 2017 DDoSolitary
 
@@ -72,13 +72,13 @@ The last step was to figure out how to launch them. I use [wsltty](https://githu
 
 ### Original
 
-```
+```bash
 %LOCALAPPDATA%\wsltty\bin\mintty.exe -i "%PROGRAMFILES%/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_1604.2017.922.0_x64__79rhkp1fndgsc/images/icon.ico" --WSL= -h err --configdir="%APPDATA%\wsltty"  -~
 ```
 
 ### Modified
 
-```
+```bash
 %LOCALAPPDATA%\wsltty\bin\mintty.exe -i "%PROGRAMFILES%/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_1604.2017.922.0_x64__79rhkp1fndgsc/images/icon.ico" --WSL="Gophercon" -h err --configdir="%APPDATA%\wsltty"  -~
 ```
 

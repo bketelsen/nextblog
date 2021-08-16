@@ -14,4 +14,4 @@ A coworker sent me a link to this recipe and I have to share it. It's the tastie
 
 If you make one let me know... Looks delicious. Blessed be the maker.
 
-_image courtesy of kitchenoverlord.com_
+Credits: _image courtesy of kitchenoverlord.com_

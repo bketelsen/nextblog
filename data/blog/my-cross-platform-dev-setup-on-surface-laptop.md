@@ -47,7 +47,7 @@ That meant that my source code was only in WSL's filesystem, and completely invi
 
 I don't know why it didn't occur to me before, but I just removed the "--color=auto" settings in my .bashrc last weekend, and suddenly I was perfectly happy looking at files on the Windows filesystem from WSL's bash. ![nouglycolors](/content/images/2017/09/nouglycolors.png) No strange colors, no mental block about viewing the files! This was actually a pretty big turning point for me. As crazy as it may sound, just removing coloring from my bash prompt unblocked me from using and viewing the Windows filesystem from WSL. Tiny change, huge mental gain. I moved my code from WSL to the Windows filesystem:
 
-```
+```bash
 mv ~/src /mnt/c/projects
 ```
 
@@ -57,7 +57,7 @@ Then I set my $GOPATH to "/mnt/c/projects" and Go worked beautifully from WSL.  
 
 On the Windows side, I installed Visual Studio Code and set it up to use the Windows installation of Go for all the tooling required by the VSCode plugin for Go. The only change to my VS Code configuration file was to specify the global $GOPATH:
 
-```
+```js
 {
     "go.gopath": "c:\\projects"
 }
@@ -69,7 +69,7 @@ This setup uses the Windows Go installation to do code linting and other nicetie
 
 I installed Docker for Windows, and installed the "docker" command in WSL. To let Docker work against the Windows installation, I needed to export "DOCKER_HOST" in my .bashrc
 
-```
+```bash
 export DOCKER_HOST=tcp://127.0.0.1:2375
 ```
 

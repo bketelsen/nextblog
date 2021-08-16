@@ -75,7 +75,7 @@ Open PowerShell as an Administrator:
 
 run these two commands:
 
-```
+```bash
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -93,7 +93,7 @@ Install [Ubuntu](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) from th
 
 Let's and make WSL 2 our _default_ per the [Installation Instructions for WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install). If we don't do this we risk running WSL 1 accidentally and WSL 2 has _much_ better performance. Let's open a terminal and run:
 
-```
+```bash
 wsl --set-default-version 2
 ```
 
@@ -131,7 +131,7 @@ Find the stanza with your "Ubuntu" installation and copy the `guid`. Paste it in
 
 While you're in there, download [Cascadia Code PL](https://github.com/microsoft/cascadia-code/releases) and install it (by double-clicking on the ttf file). Edit your "Ubuntu" profile in the Windows Terminal settings to use the new font:
 
-```
+```js
 	{
             "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
             "hidden": false,
@@ -153,7 +153,7 @@ To navigate there directly enter `\\wsl$` in the address bar of Windows Explorer
 
 ![Windows Explorer](/static/images/wsl/explorer-integration.png)
 
-### Continuing On...
+### Continuing On
 
 - Install your dotfiles
 
@@ -171,7 +171,7 @@ You can even just [install Docker Engine - Community for Ubuntu](https://docs.do
 
 Finally, once we have WSL setup the way we'd like, we can export and import our distro(s) to or from a tar file using the [following commands](https://docs.microsoft.com/en-us/windows/wsl/reference#arguments-for-managing-windows-subsystem-for-linux):
 
-```
+```bash
 wsl --export <Distro> <FileName>
 
 wsl --import <Distro> <InstallLocation> <FileName>
