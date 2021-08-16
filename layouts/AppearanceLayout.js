@@ -1,4 +1,4 @@
-import { BlogSEO } from '@/components/SEO'
+import { ElsewhereSEO } from '@/components/SEO'
 import Image from '@/components/Image'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
@@ -19,7 +19,7 @@ export default function AppearanceLayout({ frontMatter, authorDetails, next, pre
 
   return (
     <SectionContainer>
-      <BlogSEO
+      <ElsewhereSEO
         url={`${siteMetadata.siteUrl}/elsewhere/${slug}`}
         authorDetails={authorDetails}
         {...frontMatter}
