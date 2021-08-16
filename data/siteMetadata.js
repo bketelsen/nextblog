@@ -8,7 +8,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/bketelsen/nextblog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/briandev.png',
   email: 'mail@bjk.fyi',
   github: 'https://github.com/bketelsen',
   twitter: 'https://twitter.com/bketelsen',
