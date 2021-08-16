@@ -20,6 +20,10 @@ async function ls(p) {
       const source = fs.readFileSync(file, 'utf8')
       const { data } = matter(source)
       console.log(data.title)
+      const hashTags = data.tags.map((t) => '#' + t)
+      const spaceTags = hashTags.join(' ')
+      console.log(spaceTags)
+
       loadImage(base).then((image) => {
         context.drawImage(image, 0, 0)
         context.font = 'bold 50pt "Fira Sans"'
@@ -29,15 +33,12 @@ async function ls(p) {
 
         const text = data.title
 
-        //const textWidth = context.measureText(text).width
+        // background box for title
         context.fillRect(200 - 10, 160 - 5, 820, 320)
         context.fillStyle = '#fff'
-        //fillText(context, text, 600, 170)
-        //context.fillText(text, 600, 170)
         context.textAlign = 'center'
         context.textBaseline = 'middle'
-        //context.fillStyle = '#002763'
-
+        // draw title
         const fontSizeUsed = drawMultilineText(context, text, {
           rect: {
             x: 600,
@@ -50,6 +51,22 @@ async function ls(p) {
           lineHeight: 1,
           minFontSize: 70,
           maxFontSize: 130,
+        })
+        context.fillStyle = '#fff'
+        context.textAlign = 'center'
+        context.textBaseline = 'alphabetic'
+        const fontSizeUsed2 = drawMultilineText(context, spaceTags, {
+          rect: {
+            x: 600,
+            y: 480,
+            width: 800,
+            height: 100,
+          },
+          font: 'Fira Sans',
+          verbose: true,
+          lineHeight: 1,
+          minFontSize: 25,
+          maxFontSize: 40,
         })
 
         const buffer = canvas.toBuffer('image/png')
