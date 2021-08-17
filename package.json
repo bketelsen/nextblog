@@ -5,6 +5,7 @@
   "scripts": {
     "start": "next-remote-watch ./data",
     "dev": "next dev",
+    "predev": "node scripts/ogimage.js",
     "build": "next build",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",

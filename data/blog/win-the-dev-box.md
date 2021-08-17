@@ -3,7 +3,7 @@ title: Windows for Open Source Development
 date: '2020-02-24'
 images: ['/static/images/h3GAGi5tXMU.jpg']
 summary: 'A Series on Using Windows for Open Source Development'
-tags: ['windows', 'linux', 'open source', '30daywslchallenge']
+tags: ['windows', 'linux', 'open source', '30-daywslchallenge']
 ---
 
 I've long used macOS or Linux when I make my Open Source contributions, but I think that the time is right to try Windows as a full-time development environment. If you want to jump on board, this article series is for you!
@@ -18,9 +18,9 @@ The series will continue with other articles and advice on using Windows as your
 
 In a discussion with [Rob Conery](https://twitter.com/robconery) I made the bold statement that with the addition of the [Windows Subsystem for Linux 2(WSL2)](https://docs.microsoft.com/en-us/windows/wsl/wsl2-about) there were no blockers for the average Open Source developer to use Windows as a daily driver.
 
-To put my money where my mouth is, I've (personally) purchased a [Surface Laptop 3](https://www.microsoft.com/en-us/surface/business/surface-laptop-3), and I'm going to use it as my daily workhorse for the next 30 days. We'll call it the #30DayWSLChallenge.
+To put my money where my mouth is, I've (personally) purchased a [Surface Laptop 3](https://www.microsoft.com/en-us/surface/business/surface-laptop-3), and I'm going to use it as my daily workhorse for the next 30 days. We'll call it the #30-daywslhallenge.
 
-Find other articles in this series [with this link](/tags/30daywslchallenge/).
+Find other articles in this series [with this link](/tags/30-daywslchallenge/).
 
 ### Assumptions
 
@@ -185,7 +185,7 @@ If you're in the terminal in a directory you want to edit, you can type `code .`
 
 ## Conclusion
 
-From here you are ready to clone a repo and start making changes. Follow along [here](/tags/30daywslchallenge/) as I add more tips and tricks that I discover on my journey to reduce the number of physical and virtual computers required to do my job.
+From here you are ready to clone a repo and start making changes. Follow along [here](/tags/30-daywslchallenge/) as I add more tips and tricks that I discover on my journey to reduce the number of physical and virtual computers required to do my job.
 
 ## References and Further Information
 

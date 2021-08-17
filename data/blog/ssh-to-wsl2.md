@@ -3,14 +3,16 @@ title: Remote SSH Connections to WSL2
 date: '2020-03-03'
 images: ['/static/images/ssh-to-wsl2/cdc-_XLJy3h77cw-unsplash.jpg']
 summary: 'A Series on Using Windows for Open Source Development'
-tags: ['windows', 'linux', 'open source', '30daywslchallenge']
+tags: ['windows', 'linux', 'open source', '30-daywslchallenge']
 ---
 
 In this article I share my learnings on remotely accessing your Windows 10 computer. My motivation was to determine efficient ways to access both the Windows environment, and the WSL2 development environment from another computer.
 
+<TOCInline toc={props.toc} asDisclosure />
+
 ## Remote Access for New Windows Users
 
-Find other articles in this series [with this link](/tags/30daywslchallenge/).
+Find other articles in this series [with this link](/tags/30-daywslchallenge/).
 
 For emphasis in this article, many of the screenshots are taken from my iPad Pro accessing my desktop computer running Windows 10 and WSL2.
 
@@ -89,7 +91,7 @@ ssh -p 2222 bjk@192.0.1.100
 
 where the `192.0.1.100` is the IP address of my Windows machine.
 
-### Update August 2020
+## Update August 2020
 
 The failing of this method is that your WSL2 instance gets a new IP address each time it restarts. Based on several of the suggestions in [this Github issue](https://github.com/microsoft/WSL/issues/4150) I've created a successful workaround.
 
@@ -158,7 +160,7 @@ fi
 
 I'll probably extract that out into a bash function called `ensure` so I can use it for more than this task.
 
-#### Extra Credit
+## Extra Credit
 
 For extra credit you can set up port forwarding on your internet router to forward to this same service. I picked a random high port (like 28945), and set up port forwarding from that port to port 2222 on my Windows machine. Because it's an uncommon port, it won't get the usual SSH bot scanning traffic, and I don't have root login or password authentication enabled in the ssh daemon configuration. So I feel relatively good about the security risk. Be sure to understand your security profile before undertaking something like this.
 
