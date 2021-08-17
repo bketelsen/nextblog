@@ -12,7 +12,7 @@ const siteMetadata = {
   email: 'mail@bjk.fyi',
   github: 'https://github.com/bketelsen',
   twitter: 'https://twitter.com/bketelsen',
-  facebook: 'https://facebook.com',
+  facebook: 'https://facebook.com/bketelsen',
   youtube: 'https://youtube.com/bketelsen',
   linkedin: 'https://www.linkedin.com/bketelsen',
   locale: 'en-US',
@@ -25,7 +25,7 @@ const siteMetadata = {
   comment: {
     // Select a provider and use the environment variables associated to it
     // https://vercel.com/docs/environment-variables
-    provider: '', // supported providers: giscus, utterances, disqus
+    provider: 'giscus', // supported providers: giscus, utterances, disqus
     giscusConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
       // https://giscus.app/
