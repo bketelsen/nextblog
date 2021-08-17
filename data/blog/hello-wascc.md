@@ -4,14 +4,14 @@ title: Hello waSCC
 date: '2020-02-25'
 images: ['/static/images/hello-wascc/h3GAGi5tXMU.jpg'] # image path/url
 summary: 'Web Assembly on the Server'
-tags: ['open source', '30daywslchallenge', 'wasm']
+tags: ['open source', '30-daywslchallenge', 'wasm']
 ---
 
 I'm _really excited_ about Web Assembly on the server. The promise of sandboxed and portable code feels like the realization of the vision Docker tried to achieve. In this article I'm going to walk through creating a service using [waSCC](https://wascc.dev/), which is a host runtime for running actors written in web assembly. We'll mostly follow the tutorial for creating a new actor, but with more nuance, and specifics for using WSL2 on my Windows Laptop added for completeness.
 
 ## WASM on the Server
 
-\*\* This article includes information on how to setup my development environment in WSL2, because it's part of my [#30DayWSLChallenge](/windows-for-open-source-development).
+\*\* This article includes information on how to setup my development environment in WSL2, because it's part of my [#30-daywslchallenge](/windows-for-open-source-development).
 
 ### Development Environment
 
