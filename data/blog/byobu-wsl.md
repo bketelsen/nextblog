@@ -4,6 +4,7 @@ date: '2019-10-09'
 images: ['/static/images/mbLr6NEatMI.jpg'] # image path/url
 summary: 'Make your life easier with Byobu'
 tags: ['terminal']
+layout: PostImage
 ---
 
 [Byobu](http://byobu.co/) is a frontend for `tmux` and `screen` that allows you to save your terminal sessions and reconnect to them easily. It's one of the biggest time-savers in my bag of tricks. Read along to learn how I use it. This article applies to any \*nix-like system, despite the "on WSL" in the title.
