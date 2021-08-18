@@ -1,31 +1,43 @@
+import { useState } from 'react'
+import SEO from '../components/SEO'
+import SearchBar from '../components/SearchBar'
+import ArticleList from '../components/ArticleList'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import siteMetadata from '@/data/siteMetadata'
-import ListLayout from '@/layouts/ListLayout'
-import { PageSEO } from '@/components/SEO'
 
-export const POSTS_PER_PAGE = 5
+function BlogPage({ posts }) {
+  const pageTitle = `Blog | ${process.env.siteTitle}`
+  const [filteredPosts, setFilteredPosts] = useState(posts)
+
+  function filterResults(searchTerm) {
+    let tempArray = []
+    posts.forEach((post) => {
+      if (post.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+        tempArray.push(post)
+      }
+    })
+    setFilteredPosts(tempArray)
+  }
+
+  return (
+    <div className="">
+      <SEO title={pageTitle} />
+      <h1 className="mb-4 text-4xl font-extrabold leading-loose text-center text-gray-900 dark:text-white">
+        Blog
+      </h1>
+
+      {/* search bar */}
+      <SearchBar filterResults={filterResults} />
+
+      {/* blogs */}
+      <ArticleList posts={filteredPosts} showPagination={true} />
+    </div>
+  )
+}
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
-  const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
-  const pagination = {
-    currentPage: 1,
-    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
-  }
 
-  return { props: { initialDisplayPosts, posts, pagination } }
+  return { props: { posts } }
 }
 
-export default function Blog({ posts, initialDisplayPosts, pagination }) {
-  return (
-    <>
-      <PageSEO title={`Blog - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <ListLayout
-        posts={posts}
-        initialDisplayPosts={initialDisplayPosts}
-        pagination={pagination}
-        title="All Posts"
-      />
-    </>
-  )
-}
+export default BlogPage

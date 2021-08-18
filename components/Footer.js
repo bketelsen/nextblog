@@ -1,30 +1,58 @@
-import Link from './Link'
-import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/social-icons'
+import FooterLinkColumn from './FooterLinkColumn'
+import SocialMedia from './SocialMedia'
+import Link from 'next/link'
 
-export default function Footer() {
+function Footer() {
   return (
-    <footer>
-      <div className="flex flex-col items-center mt-16">
-        <div className="flex mb-3 space-x-4">
-          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size="6" />
-          <SocialIcon kind="github" href={siteMetadata.github} size="6" />
-          <SocialIcon kind="facebook" href={siteMetadata.facebook} size="6" />
-          <SocialIcon kind="youtube" href={siteMetadata.youtube} size="6" />
-          <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" />
-          <SocialIcon kind="twitter" href={siteMetadata.twitter} size="6" />
+    <>
+      <footer className="pt-8 pb-4 text-white bg-palette-primary dark:bg-gray-900">
+        <div className="max-w-6xl px-4 mx-auto">
+          <div className="flex flex-wrap">
+            <div className="w-full px-4 lg:w-6/12">
+              <h2 className="mb-4 text-lg font-semibold sm:text-xl md:mb-0">
+                Follow Me On Social Media
+              </h2>
+              <SocialMedia color="light" />
+            </div>
+            <div className="w-full lg:w-6/12">
+              <div className="flex flex-wrap mb-6 items-top">
+                <FooterLinkColumn
+                  items={[
+                    {
+                      label: 'Blog',
+                      link: '/blog',
+                    },
+                  ]}
+                />
+                <FooterLinkColumn
+                  items={[
+                    {
+                      label: 'About',
+                      link: '/about',
+                    },
+                    {
+                      label: 'Contact',
+                      link: '/contact',
+                    },
+                  ]}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-center md:justify-between">
+            <div className="w-full px-4 mx-auto text-center md:w-4/12">
+              <div className="py-1 text-sm font-semibold">
+                Copyright © {new Date().getFullYear()}{' '}
+                <Link href="/" passHref>
+                  {process.env.siteTitle}
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>{siteMetadata.author}</div>
-          <div>{` • `}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
-          <Link href="/">{siteMetadata.title}</Link>
-        </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="https://github.com/bketelsen/nextblog">Source Code</Link>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   )
 }
+
+export default Footer
