@@ -1,5 +1,6 @@
-import SubscribeCTA from './SubscribeCTA'
+import Image from 'next/image'
 import SocialMedia from './SocialMedia'
+import SubscribeCTA from './SubscribeCTA'
 
 function Hero() {
   return (
@@ -10,7 +11,7 @@ function Hero() {
           <br /> Welcome to my blog!
         </h2>
         <p className="mt-6 text-base text-gray-600 font-body dark:text-gray-300 sm:text-lg md:text-xl">
-          Stuff about me. Get more <span className="text-palette-primary">here</span>.
+          Stuff about me. Get more <span className="text-primary-500">here</span>.
         </p>
         <p className="mt-6 text-base text-gray-600 font-body dark:text-gray-300 sm:text-lg md:text-xl">
           Please subscribe and follow me on social media to stay updated about my shenanigans.
@@ -19,12 +20,12 @@ function Hero() {
         <SocialMedia color="dark" />
       </div>
       <div className="w-full my-8 lg:m-0 lg:w-1/2">
-        <img
+        <Image
           height={600}
           width={600}
           className="object-cover w-64 h-64 mx-auto rounded-full shadow lg:h-96 lg:w-96 lg:mr-0"
           src="/images/main-img.jpg"
-          alt="main-img"
+          alt="Brian Ketelsen"
         />
       </div>
     </div>

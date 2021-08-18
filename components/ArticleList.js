@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
-import PostPreview from './PostPreview'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { useEffect, useState } from 'react'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import PostPreview from './PostPreview'
 
 function ArticleList({ posts, showPagination }) {
   const displayNum = 9
@@ -74,14 +75,14 @@ function ArticleList({ posts, showPagination }) {
             Posts
           </div>
           <button
-            className="text-palette-primary hover:text-palette-dark focus:outline-none"
+            className="text-primary-500 hover:text-primary-800 focus:outline-none"
             aria-label="left-arrow"
             onClick={() => indexDecrement(minIdx)}
           >
             <FontAwesomeIcon className="inline w-6 ml-2 sm:w-8" icon={faArrowLeft} />
           </button>
           <button
-            className="text-palette-primary hover:text-palette-dark focus:outline-none"
+            className="text-primary-500 hover:text-primary-800 focus:outline-none"
             aria-label="left-arrow"
             onClick={() => indexIncrement(maxIdx)}
           >

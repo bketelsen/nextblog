@@ -14,7 +14,7 @@ function DesktopNav() {
         },
       ].map((link) => (
         <Link href={link.route} passHref key={link.title}>
-          <a className="justify-center block p-4 py-4 mx-auto text-xl font-medium font-semibold text-gray-600 no-underline transition duration-150 ease-in-out md:mt-0 hover:text-palette-primary dark:text-white dark:hover:text-palette-primary focus:outline-none">
+          <a className="justify-center block p-4 py-4 mx-auto text-xl font-medium font-semibold text-gray-600 no-underline transition duration-150 ease-in-out md:mt-0 hover:text-primary-500 dark:text-white dark:hover:text-primary-500 focus:outline-none">
             {link.title}
           </a>
         </Link>

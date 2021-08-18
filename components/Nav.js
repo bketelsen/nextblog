@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import DesktopNav from './DesktopNav'
-import MobileNav from './MobileNav'
-import Link from 'next/link'
 import DarkModeIcon from './DarkModeIcon'
+import DesktopNav from './DesktopNav'
+import Link from 'next/link'
+import MobileNav from './MobileNav'
+import { useState } from 'react'
 
 function Nav() {
   const [isExpanded, toggleExpansion] = useState(false)
@@ -15,7 +15,7 @@ function Nav() {
         <Link href="/" passHref>
           <a className="p-4 cursor-pointer focus:outline-none">
             <h1 className="flex items-center no-underline">
-              <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <span className="text-xl font-bold tracking-tight text-primary-600 hover:text-gray-700 dark:text-white">
                 {process.env.siteTitle}
               </span>
             </h1>

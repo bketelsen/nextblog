@@ -1,14 +1,13 @@
-import { formatContentfulDate } from '../utils/helpers'
-
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
+import { formatContentfulDate } from '../utils/helpers'
 
 function PostPreview({ slug, date, image, title, description }) {
   const postHref = `/blog/${slug}`
 
   return (
     <Link href={postHref}>
-      <div className="max-w-xs p-4 mx-2 my-4 border rounded shadow-lg cursor-pointer dark:bg-gray-900 border-palette-lighter dark:border-gray-900 hover:bg-palette-lighter dark:hover:bg-palette-dark">
+      <div className="max-w-xs p-4 mx-2 my-4 border border-gray-100 rounded shadow-xl cursor-pointer dark:bg-gray-900 dark:border-gray-900 hover:bg-primary-300 dark:hover:bg-primary-900">
         {image && (
           <Image
             className="object-cover w-full h-48 rounded"

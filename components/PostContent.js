@@ -1,7 +1,7 @@
-import { formatContentfulDate } from '@/utils/helpers'
+import Image from 'next/image'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import SectionContainer from './SectionContainer'
-import Image from 'next/image'
+import { formatContentfulDate } from '@/utils/helpers'
 
 function Post({ post }) {
   const { mdxSource, toc, frontMatter } = post
@@ -25,7 +25,7 @@ function Post({ post }) {
           />
         )}
 
-        <div className="container p-4 mx-auto text-lg prose text-gray-800 prose-dark dark:text-gray-100 sm:p-8">
+        <div className="container p-4 mx-auto text-lg prose text-gray-800 dark:prose-dark dark:text-gray-100 sm:p-8">
           <MDXLayoutRenderer toc={toc} mdxSource={mdxSource} frontMatter={frontMatter} />
         </div>
       </div>

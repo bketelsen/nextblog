@@ -2,12 +2,12 @@ import Link from 'next/link'
 
 function FooterLinkColumn({ items }) {
   return (
-    <div className="w-full my-8 lg:my-0 lg:w-4/12 px-4 ml-auto">
-      <ul className="list-unstyled text-white">
+    <div className="w-full px-4 my-8 ml-auto lg:my-0 lg:w-4/12">
+      <ul className="text-white list-unstyled">
         {items.map((item, index) => (
           <li key={index}>
             <Link href={item.link} passHref>
-              <a className="hover:text-gray-900 dark:hover:text-palette-primary font-semibold block text py-2 focus:outline-none">
+              <a className="block py-2 font-semibold hover:text-gray-900 dark:hover:text-primary-500 text focus:outline-none">
                 {item.label}
               </a>
             </Link>
