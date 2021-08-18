@@ -1,6 +1,7 @@
 import SEO from '../components/SEO'
 import SocialMedia from '../components/SocialMedia'
 import SectionContainer from '@/components/SectionContainer'
+import Image from 'next/image'
 
 function AboutPage() {
   const pageTitle = `About | ${process.env.siteTitle}`
@@ -12,11 +13,15 @@ function AboutPage() {
           About
         </h1>
         <section className="w-full px-4 py-2 mx-auto text-gray-800 sm:max-w-6xl dark:text-gray-200">
-          <img
-            className="object-cover w-64 h-64 mx-auto my-8 rounded-full"
-            src="/images/main-img.jpg"
-            alt="my-pic"
-          />
+          <div className="flex justify-center">
+            <Image
+              className="object-cover w-64 h-64 mx-auto my-8 rounded-full"
+              src="/images/main-img.jpg"
+              alt="my-pic"
+              height={300}
+              width={300}
+            />
+          </div>
           <p className="mt-6 sm:text-lg md:text-xl">Hello! I'm Jane. This is my blog.</p>
           <p className="mt-6 sm:text-lg md:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

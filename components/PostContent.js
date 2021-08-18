@@ -1,6 +1,7 @@
 import { formatContentfulDate } from '@/utils/helpers'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import SectionContainer from './SectionContainer'
+import Image from 'next/image'
 
 function Post({ post }) {
   const { mdxSource, toc, frontMatter } = post
@@ -15,7 +16,7 @@ function Post({ post }) {
           {formatContentfulDate(frontMatter.date)}
         </p>
         {frontMatter.images && (
-          <img
+          <Image
             className="object-cover object-center w-full py-2 rounded-sm h-72 sm:h-96 md:h-120"
             width="1280"
             height="720"
