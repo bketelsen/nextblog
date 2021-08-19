@@ -9,27 +9,34 @@ function MobileNav({ toggleExpansion }) {
   }
 
   return (
-    <nav className="block w-full h-screen md:block md:flex md:items-center md:w-auto">
-      <div className="border-b border-gray-300"></div>
-      {[
-        {
-          route: `/about`,
-          title: `About`,
-        },
-        {
-          route: `/blog`,
-          title: `Blog`,
-        },
-      ].map((link) => (
-        <button
-          className="block w-full mx-auto btn btn-ghost"
-          key={link.title}
-          onClick={() => navBtnClicked(link.route)}
-        >
-          {link.title}
-        </button>
-      ))}
-    </nav>
+    <div className="py-4 bg-neutral">
+      <ul className="p-4 shadow-lg menu bg-neutral rounded-box">
+        {[
+          {
+            route: `/`,
+            title: `Home`,
+          },
+          {
+            route: `/blog`,
+            title: `Blog`,
+          },
+          {
+            route: `/about`,
+            title: `About`,
+          },
+        ].map((link) => (
+          <li key={link.title}>
+            <button
+              className="block w-full mx-auto btn btn-ghost"
+              key={link.title}
+              onClick={() => navBtnClicked(link.route)}
+            >
+              {link.title}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 

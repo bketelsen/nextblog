@@ -20,9 +20,9 @@ function DarkModeIcon() {
       }}
     >
       {theme === 'dark' ? (
-        <FontAwesomeIcon icon={faSun} className="w-5 text-white cursor-pointer" />
+        <FontAwesomeIcon icon={faSun} className="w-5 cursor-pointer" />
       ) : (
-        <FontAwesomeIcon icon={faMoon} className="w-5 text-gray-600 cursor-pointer" />
+        <FontAwesomeIcon icon={faMoon} className="w-5 cursor-pointer" />
       )}
     </button>
   )

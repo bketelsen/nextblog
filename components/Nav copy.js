@@ -7,35 +7,20 @@ import { useState } from 'react'
 function Nav() {
   const [isExpanded, toggleExpansion] = useState(false)
   return (
-    <div className="mb-2 shadow-lg navbar bg-neutral text-neutral-content rounded-box">
-      <div className="px-2 mx-2 navbar-start">
-        <span className="text-lg font-bold"> {process.env.siteTitle}</span>
-      </div>
-      <div className="hidden px-2 mx-2 navbar-center lg:flex">
-        <div className="flex items-stretch">
-          {[
-            {
-              route: `/`,
-              title: `Home`,
-            },
-            {
-              route: `/blog`,
-              title: `Blog`,
-            },
-            {
-              route: `/about`,
-              title: `About`,
-            },
-          ].map((link) => (
-            <Link href={link.route} passHref key={link.title}>
-              <a className="btn btn-ghost btn-sm rounded-btn">{link.title}</a>
-            </Link>
-          ))}
+    <header>
+      <div className="flex flex-wrap items-center justify-between max-w-5xl py-4 mx-auto md:p-6">
+        <div className="p-4">
+          <DarkModeIcon />
         </div>
-      </div>
-      <div className="mr-2 navbar-end">
-        <DarkModeIcon />
-        {isExpanded && <MobileNav toggleExpansion={toggleExpansion} />}
+        <Link href="/" passHref>
+          <a className="p-4 cursor-pointer focus:outline-none">
+            <h1 className="flex items-center no-underline">
+              <span className="text-xl font-bold tracking-tight hover:text-primary">
+                {process.env.siteTitle}
+              </span>
+            </h1>
+          </a>
+        </Link>
 
         {isExpanded ? (
           <button
@@ -72,8 +57,10 @@ function Nav() {
             </svg>
           </button>
         )}
+
+        {isExpanded ? <MobileNav toggleExpansion={toggleExpansion} /> : <DesktopNav />}
       </div>
-    </div>
+    </header>
   )
 }
 
