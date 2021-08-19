@@ -16,7 +16,7 @@ function DarkModeIcon() {
       aria-label="dark-mode-icon"
       className="focus:outline-none"
       onClick={() => {
-        setTheme(theme === 'cupcake' ? 'dark' : 'cupcake')
+        setTheme(theme === 'light' ? 'dark' : 'light')
       }}
     >
       {theme === 'dark' ? (

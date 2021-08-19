@@ -1,5 +1,3 @@
-import DarkModeIcon from './DarkModeIcon'
-import DesktopNav from './DesktopNav'
 import Link from 'next/link'
 import MobileNav from './MobileNav'
 import { useState } from 'react'
@@ -12,7 +10,7 @@ function Nav() {
         <div className="px-2 mx-2 navbar-start">
           <span className="text-lg font-bold"> {process.env.siteTitle}</span>
         </div>
-        <div className="hidden px-2 mx-2 navbar-center lg:flex">
+        <div className="hidden px-2 mx-2 navbar-center md:flex">
           <div className="flex items-stretch">
             {[
               {
@@ -35,8 +33,6 @@ function Nav() {
           </div>
         </div>
         <div className="mr-2 navbar-end">
-          <DarkModeIcon />
-
           {isExpanded ? (
             <button
               onClick={() => toggleExpansion(!isExpanded)}

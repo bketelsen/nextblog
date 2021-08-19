@@ -7,7 +7,7 @@ function PostPreview({ slug, date, tags, featured, image, title, description }) 
 
   return (
     <Link href={postHref} passHref>
-      <div className="shadow-lg hover:shadow-2xl card">
+      <div className="shadow-md hover:shadow-2xl card">
         <figure>
           {image && (
             <Image
@@ -19,7 +19,7 @@ function PostPreview({ slug, date, tags, featured, image, title, description }) 
             />
           )}{' '}
         </figure>
-        <div className="card-body hover:bg-primary">
+        <div className="card-body hover:bg-accent">
           <h2 className="card-title">{title}</h2>
           {featured && <div className="mb-2 uppercase badge badge-accent">featured</div>}
           <p className="mb-2"> {formatContentfulDate(date)}</p>
