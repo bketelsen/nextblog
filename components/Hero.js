@@ -27,7 +27,7 @@ function Hero() {
           height={600}
           width={600}
           className="object-cover w-64 h-64 mx-auto rounded-full shadow lg:h-96 lg:w-96 lg:mr-0"
-          src="/images/main-img.jpg"
+          src="/static/images/brian-head.jpeg"
           alt="Brian Ketelsen"
         />
       </div>

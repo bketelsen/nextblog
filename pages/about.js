@@ -14,8 +14,8 @@ function AboutPage() {
           <div className="flex justify-center">
             <Image
               className="object-cover w-64 h-64 mx-auto my-8 rounded-full"
-              src="/images/main-img.jpg"
-              alt="my-pic"
+              src="/static/images/brian-head.jpeg"
+              alt="silver fox, amirite"
               height={300}
               width={300}
             />

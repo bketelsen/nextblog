@@ -19,7 +19,7 @@ function PostPreview({ slug, date, tags, featured, image, title, description }) 
             />
           )}{' '}
         </figure>
-        <div className="card-body">
+        <div className="card-body hover:bg-primary">
           <h2 className="card-title">{title}</h2>
           {featured && <div className="mb-2 uppercase badge badge-accent">featured</div>}
           <p className="mb-2"> {formatContentfulDate(date)}</p>
