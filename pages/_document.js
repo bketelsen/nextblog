@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en" data-theme="corporate">
+      <Html lang="en" data-theme="cupcake">
         <Head />
         <body className="antialiased text-base-content bg-base">
           <Main />

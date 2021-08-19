@@ -22,7 +22,7 @@ function MobileNav({ toggleExpansion }) {
         },
       ].map((link) => (
         <button
-          className="block w-full py-4 mx-auto font-medium font-semibold text-gray-600 no-underline transition duration-150 ease-in-out border-b border-gray-300 md:mt-0 hover:text-gray-700 dark:text-white focus:outline-none"
+          className="block w-full mx-auto btn btn-ghost"
           key={link.title}
           onClick={() => navBtnClicked(link.route)}
         >

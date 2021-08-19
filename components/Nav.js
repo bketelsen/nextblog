@@ -26,7 +26,7 @@ function Nav() {
           <button
             onClick={() => toggleExpansion(!isExpanded)}
             type="button"
-            className="inline-flex items-center justify-center px-6 text-gray-600 transition duration-150 ease-in-out rounded-md hover:text-gray-700 dark:text-white focus:outline-none"
+            className="inline-flex items-center justify-center px-6 transition duration-150 ease-in-out rounded-md focus:outline-none"
             aria-label="Close menu"
           >
             <svg className="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -42,7 +42,7 @@ function Nav() {
           <button
             onClick={() => toggleExpansion(!isExpanded)}
             type="button"
-            className="inline-flex items-center justify-center px-6 text-gray-600 transition duration-150 ease-in-out rounded-md md:hidden hover:text-gray-700 dark:text-white focus:outline-none"
+            className="inline-flex items-center justify-center px-6 transition duration-150 ease-in-out rounded-md md:hidden focus:outline-none"
             id="main-menu"
             aria-label="Main menu"
             aria-haspopup="true"

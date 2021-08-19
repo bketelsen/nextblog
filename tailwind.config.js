@@ -6,7 +6,7 @@ module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './lib/**/*.js'],
   darkMode: 'class',
   daisyui: {
-    themes: ['corporate', 'dark'],
+    themes: ['cupcake', 'dark'],
   },
   theme: {
     extend: {
