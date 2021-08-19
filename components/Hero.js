@@ -11,7 +11,10 @@ function Hero() {
           <br /> Welcome to my blog!
         </h2>
         <p className="mt-6 text-base text-base-content font-body sm:text-lg md:text-xl">
-          Stuff about me. Get more <span className="text-primary">here</span>.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Cras sed felis eget velit aliquet sagittis id. nullam
+          eget felis eget. Lacus suspendisse faucibus interdum posuere lorem ipsum. Sed sed sed
+          risus pretium quam vulputate dignissim.
         </p>
         <p className="mt-6 text-base text-base-content font-body sm:text-lg md:text-xl">
           Please subscribe and follow me on social media to stay updated about my shenanigans.

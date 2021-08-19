@@ -20,7 +20,7 @@ function AboutPage() {
               width={300}
             />
           </div>
-          <p className="mt-6 sm:text-lg md:text-xl">Hello! I'm Jane. This is my blog.</p>
+          <p className="mt-6 sm:text-lg md:text-xl">Hello! I'm Brian. This is my blog.</p>
           <p className="mt-6 sm:text-lg md:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
