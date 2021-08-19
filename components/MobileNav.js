@@ -9,8 +9,8 @@ function MobileNav({ toggleExpansion }) {
   }
 
   return (
-    <div className="py-4 bg-neutral">
-      <ul className="p-4 shadow-lg menu bg-neutral rounded-box">
+    <div className="mb-2 shadow-lg navbar bg-neutral text-neutral-content rounded-box">
+      <ul className="shadow-lg menu bg-neutral rounded-box">
         {[
           {
             route: `/`,
@@ -27,7 +27,7 @@ function MobileNav({ toggleExpansion }) {
         ].map((link) => (
           <li key={link.title}>
             <button
-              className="block w-full mx-auto btn btn-ghost"
+              className="block w-full btn btn-ghost"
               key={link.title}
               onClick={() => navBtnClicked(link.route)}
             >
