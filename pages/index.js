@@ -1,12 +1,16 @@
 import ArticleList from '@/components/ArticleList'
 import BlogCta from '@/components/BlogCta'
 import Hero from '@/components/Hero'
+import { PageSEO } from '@/components/SEO'
 import SubscribeCTA from '@/components/SubscribeCTA'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
+import siteMetadata from '@/data/siteMetadata'
 
 function IndexPage({ posts }) {
   return (
     <div className="">
+      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+
       {/* hero section */}
       <Hero />
 

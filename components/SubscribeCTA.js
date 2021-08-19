@@ -6,7 +6,10 @@ function SubscribeCTA() {
         type="text"
         className="w-full h-12 px-4 py-2 input input-bordered"
       />
-      <button className="btn btn-primary" onClick={() => console.log('Subscribe Action')}>
+      <button
+        className="btn btn-outline btn-primary"
+        onClick={() => console.log('Subscribe Action')}
+      >
         Subscribe
       </button>
     </div>

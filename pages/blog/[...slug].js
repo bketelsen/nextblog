@@ -1,11 +1,20 @@
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
 
+import { BlogSEO } from '@/components/SEO'
 import PostContent from '@/components/PostContent'
+import siteMetadata from '@/data/siteMetadata'
 
 function Post({ post }) {
   // console.log('post', post)
+  const { frontMatter } = post
+  const { slug, fileName, date, title, tags } = frontMatter
 
-  return <PostContent post={post} />
+  return (
+    <>
+      <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} {...frontMatter} />
+      <PostContent post={post} />
+    </>
+  )
 }
 
 export async function getStaticPaths() {

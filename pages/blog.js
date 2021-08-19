@@ -1,7 +1,8 @@
 import ArticleList from '../components/ArticleList'
-import SEO from '../components/SEO'
+import { PageSEO } from '@/components/SEO'
 import SearchBar from '../components/SearchBar'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
+import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 
 function BlogPage({ posts }) {
@@ -20,7 +21,7 @@ function BlogPage({ posts }) {
 
   return (
     <div className="">
-      <SEO title={pageTitle} />
+      <PageSEO title={`Blog - ${siteMetadata.author}`} description={siteMetadata.description} />
       <h1 className="my-4 text-4xl font-extrabold leading-loose text-center sm:pt-4">Blog</h1>
 
       {/* search bar */}

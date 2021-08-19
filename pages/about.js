@@ -1,14 +1,15 @@
 import Image from 'next/image'
-import SEO from '../components/SEO'
+import { PageSEO } from '@/components/SEO'
 import SectionContainer from '@/components/SectionContainer'
 import SocialMedia from '../components/SocialMedia'
+import siteMetadata from '@/data/siteMetadata'
 
 function AboutPage() {
   const pageTitle = `About | ${process.env.siteTitle}`
   return (
     <SectionContainer>
       <div className="container min-h-screen mx-auto mb-20">
-        <SEO title={pageTitle} />
+        <PageSEO title={`About - ${siteMetadata.author}`} description={siteMetadata.description} />
         <h1 className="my-4 text-4xl font-extrabold leading-loose text-center sm:pt-4">About</h1>
         <section className="w-full px-4 py-2 mx-auto sm:max-w-6xl ">
           <div className="flex justify-center">
