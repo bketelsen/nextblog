@@ -5,7 +5,7 @@ import SocialMedia from './SocialMedia'
 function Footer() {
   return (
     <>
-      <footer className="pt-8 pb-4 text-white bg-primary-500 dark:bg-gray-900">
+      <footer className="pt-8 pb-4">
         <div className="max-w-6xl px-4 mx-auto">
           <div className="flex flex-wrap">
             <div className="w-full px-4 lg:w-6/12">

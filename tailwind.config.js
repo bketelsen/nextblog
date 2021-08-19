@@ -5,6 +5,9 @@ module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './lib/**/*.js'],
   darkMode: 'class',
+  daisyui: {
+    themes: ['corporate', 'dark'],
+  },
   theme: {
     extend: {
       spacing: {
@@ -20,8 +23,6 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.blue,
-        gray: colors.coolGray,
         code: {
           green: '#b5f4a5',
           yellow: '#ffe484',
@@ -159,5 +160,5 @@ module.exports = {
   variants: {
     typography: ['dark'],
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('daisyui')],
 }

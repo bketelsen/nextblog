@@ -6,14 +6,14 @@ function Hero() {
   return (
     <div className="flex flex-col items-center max-w-6xl px-6 mx-auto lg:flex-row lg:justify-around lg:px-20 lg:py-2">
       <div className="w-full py-4 mx-auto text-center lg:text-left sm:w-2/3 lg:w-1/2">
-        <h2 className="text-2xl font-extrabold text-gray-900 dark:text-white xs:text-3xl sm:text-4xl md:text-5xl">
+        <h2 className="text-2xl font-extrabold text-base-content xs:text-3xl sm:text-4xl md:text-5xl">
           Hi - I'm Brian.
           <br /> Welcome to my blog!
         </h2>
-        <p className="mt-6 text-base text-gray-600 font-body dark:text-gray-300 sm:text-lg md:text-xl">
-          Stuff about me. Get more <span className="text-primary-500">here</span>.
+        <p className="mt-6 text-base text-base-content font-body sm:text-lg md:text-xl">
+          Stuff about me. Get more <span className="text-primary">here</span>.
         </p>
-        <p className="mt-6 text-base text-gray-600 font-body dark:text-gray-300 sm:text-lg md:text-xl">
+        <p className="mt-6 text-base text-base-content font-body sm:text-lg md:text-xl">
           Please subscribe and follow me on social media to stay updated about my shenanigans.
         </p>
         <SubscribeCTA />

@@ -7,7 +7,7 @@ function FooterLinkColumn({ items }) {
         {items.map((item, index) => (
           <li key={index}>
             <Link href={item.link} passHref>
-              <a className="block py-2 font-semibold hover:text-gray-900 dark:hover:text-primary-500 text focus:outline-none">
+              <a className="block py-2 font-semibold hover:text-accent text-primary-content focus:outline-none">
                 {item.label}
               </a>
             </Link>

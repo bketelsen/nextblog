@@ -52,37 +52,38 @@ function ArticleList({ posts, showPagination }) {
 
   return (
     <div className="max-w-6xl py-4 mx-auto md:py-8 lg:py-12">
-      <ul className="flex flex-wrap justify-center w-full px-4 md:justify-start sm:px-8">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {' '}
         {displayedPosts.map((node) => {
           return (
-            <li key={node.slug}>
-              <PostPreview
-                slug={node.slug}
-                date={node.date}
-                image={node.images ? node.images[0] : null}
-                title={node.title}
-                description={node.summary}
-              />
-            </li>
+            <PostPreview
+              key={node.slug}
+              slug={node.slug}
+              tags={node.tags}
+              featured={node.featured}
+              date={node.date}
+              image={node.images ? node.images[0] : null}
+              title={node.title}
+              description={node.summary}
+            />
           )
         })}
-      </ul>
-
+      </div>
       {showPagination ? (
         <div className="flex items-center justify-center my-4 space-x-4 md:my-8 lg:my-12">
-          <div className="font-semibold text-gray-900 dark:text-white">
+          <div className="font-semibold ">
             {Math.min(minIdx + 1, posts.length)}-{Math.min(maxIdx, posts.length)} of {posts.length}{' '}
             Posts
           </div>
           <button
-            className="text-primary-500 hover:text-primary-800 focus:outline-none"
+            className="text-primary hover:text-primary-focus focus:outline-none"
             aria-label="left-arrow"
             onClick={() => indexDecrement(minIdx)}
           >
             <FontAwesomeIcon className="inline w-6 ml-2 sm:w-8" icon={faArrowLeft} />
           </button>
           <button
-            className="text-primary-500 hover:text-primary-800 focus:outline-none"
+            className="text-primary hover:text-primary-focus focus:outline-none"
             aria-label="left-arrow"
             onClick={() => indexIncrement(maxIdx)}
           >

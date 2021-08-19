@@ -11,7 +11,7 @@ function IndexPage({ posts }) {
       <Hero />
 
       {/* article section */}
-      <h1 className="my-4 text-4xl font-extrabold leading-loose text-center text-gray-900 dark:text-white sm:pt-4">
+      <h1 className="my-4 text-4xl font-extrabold leading-loose text-center sm:pt-4">
         Recent Posts
       </h1>
       <ArticleList posts={posts} showPagination={false} />

@@ -6,7 +6,7 @@ import { ThemeProvider } from 'next-themes'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider forcedTheme={Component.theme || undefined} attribute="class">
+    <ThemeProvider forcedTheme={Component.theme || undefined} attribute="data-theme">
       <Layout>
         <SEO title={process.env.siteTitle} />
 

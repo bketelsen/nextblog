@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import ArticleList from '../components/ArticleList'
 import SEO from '../components/SEO'
 import SearchBar from '../components/SearchBar'
-import ArticleList from '../components/ArticleList'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
+import { useState } from 'react'
 
 function BlogPage({ posts }) {
   const pageTitle = `Blog | ${process.env.siteTitle}`
@@ -21,9 +21,7 @@ function BlogPage({ posts }) {
   return (
     <div className="">
       <SEO title={pageTitle} />
-      <h1 className="mb-4 text-4xl font-extrabold leading-loose text-center text-gray-900 dark:text-white">
-        Blog
-      </h1>
+      <h1 className="my-4 text-4xl font-extrabold leading-loose text-center sm:pt-4">Blog</h1>
 
       {/* search bar */}
       <SearchBar filterResults={filterResults} />
