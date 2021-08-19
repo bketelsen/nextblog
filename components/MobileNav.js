@@ -10,7 +10,7 @@ function MobileNav({ toggleExpansion }) {
 
   return (
     <div className="mb-2 shadow-lg navbar bg-neutral text-neutral-content rounded-box">
-      <ul className="shadow-lg menu bg-neutral rounded-box">
+      <ul className="shadow-lg menu bg-neutral ">
         {[
           {
             route: `/`,
