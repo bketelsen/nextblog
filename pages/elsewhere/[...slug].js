@@ -13,14 +13,14 @@ function Post({ post }) {
 
   return (
     <div>
-      <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} {...frontMatter} />
+      <BlogSEO url={`${siteMetadata.siteUrl}/elsewhere/${slug}`} {...frontMatter} />
       <PostContent post={post} />
     </div>
   )
 }
 
 export async function getStaticPaths() {
-  const posts = getFiles('blog')
+  const posts = getFiles('elsewhere')
   return {
     paths: posts.map((p) => ({
       params: {
@@ -32,11 +32,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const allPosts = await getAllFilesFrontMatter('blog')
+  const allPosts = await getAllFilesFrontMatter('elsewhere')
   const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === params.slug.join('/'))
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
-  const post = await getFileBySlug('blog', params.slug.join('/'))
+  const post = await getFileBySlug('elsewhere', params.slug.join('/'))
   /*const authorList = post.frontMatter.authors || ['default']
   const authorPromise = authorList.map(async (author) => {
     const authorResults = await getFileBySlug('authors', [author])
@@ -45,8 +45,8 @@ export async function getStaticProps({ params }) {
   const authorDetails = await Promise.all(authorPromise)
 */
   // rss
-  const rss = generateRss(allPosts, 'blog')
-  fs.writeFileSync('./public/feed.xml', rss)
+  const rss = generateRss(allPosts, 'elsewhere')
+  fs.writeFileSync('./public/elsewhere/feed.xml', rss)
 
   return { props: { post, prev, next } }
 }

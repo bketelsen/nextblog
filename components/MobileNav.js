@@ -21,6 +21,10 @@ function MobileNav({ toggleExpansion }) {
             title: `Blog`,
           },
           {
+            route: `/elsewhere`,
+            title: `Elsewhere`,
+          },
+          {
             route: `/about`,
             title: `About`,
           },

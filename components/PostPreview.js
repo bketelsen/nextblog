@@ -2,8 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { formatDate } from '../utils/helpers'
 
-function PostPreview({ slug, date, tags, featured, image, title, description }) {
-  const postHref = `/blog/${slug}`
+function PostPreview({ path, slug, date, tags, featured, image, title, description }) {
+  const postHref = `/${path}/${slug}`
 
   return (
     <Link href={postHref} passHref>
@@ -33,7 +33,7 @@ function PostPreview({ slug, date, tags, featured, image, title, description }) 
               ))}
           </div>
           <div className="justify-end card-actions">
-            <button className="btn btn-ghost">View Post</button>
+            <button className="btn btn-ghost">View</button>
           </div>
         </div>
       </div>

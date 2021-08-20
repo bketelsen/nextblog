@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PostPreview from './PostPreview'
 
-function ArticleList({ posts, showPagination }) {
+function ArticleList({ path = 'blog', posts, showPagination }) {
   const displayNum = 9
   const [displayedPosts, setDisplayedPosts] = useState(posts)
   const [minIdx, setMinIdx] = useState(0)
@@ -57,6 +57,7 @@ function ArticleList({ posts, showPagination }) {
         {displayedPosts.map((node) => {
           return (
             <PostPreview
+              path={path}
               key={node.slug}
               slug={node.slug}
               tags={node.tags}

@@ -23,6 +23,10 @@ function Nav() {
                 title: `Blog`,
               },
               {
+                route: `/elsewhere`,
+                title: `Elsewhere`,
+              },
+              {
                 route: `/about`,
                 title: `About`,
               },

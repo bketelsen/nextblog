@@ -23,6 +23,10 @@ function Footer() {
                       label: 'Blog',
                       link: '/blog',
                     },
+                    {
+                      label: 'Elsewhere',
+                      link: '/elsewhere',
+                    },
                   ]}
                 />
                 <FooterLinkColumn
