@@ -1,34 +1,44 @@
-import AppearanceListLayout from '@/layouts/AppearanceListLayout'
+import ArticleList from '../components/ArticleList'
 import { PageSEO } from '@/components/SEO'
+import SearchBar from '../components/SearchBar'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import siteMetadata from '@/data/siteMetadata'
+import { useState } from 'react'
 
-export const POSTS_PER_PAGE = 3
+function ElsewherePage({ posts }) {
+  const [filteredPosts, setFilteredPosts] = useState(posts)
+
+  function filterResults(searchTerm) {
+    let tempArray = []
+    posts.forEach((post) => {
+      if (post.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+        tempArray.push(post)
+      }
+    })
+    setFilteredPosts(tempArray)
+  }
+
+  return (
+    <div className="">
+      <PageSEO
+        title={`Elsewhere - ${siteMetadata.author}`}
+        description={siteMetadata.description}
+      />
+      <h1 className="my-4 text-4xl font-extrabold leading-loose text-center sm:pt-4">Elsewhere</h1>
+
+      {/* search bar */}
+      <SearchBar filterResults={filterResults} />
+
+      {/* blogs */}
+      <ArticleList path="elsewhere" posts={filteredPosts} showPagination={true} />
+    </div>
+  )
+}
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('elsewhere')
-  const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
-  const pagination = {
-    currentPage: 1,
-    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
-  }
 
-  return { props: { initialDisplayPosts, posts, pagination } }
+  return { props: { posts } }
 }
 
-export default function Elsewhere({ posts, initialDisplayPosts, pagination }) {
-  return (
-    <>
-      <PageSEO
-        title={`Appearances and Events - ${siteMetadata.author}`}
-        description={siteMetadata.description}
-      />
-      <AppearanceListLayout
-        posts={posts}
-        initialDisplayPosts={initialDisplayPosts}
-        pagination={pagination}
-        title="Appearances and Events"
-      />
-    </>
-  )
-}
+export default ElsewherePage

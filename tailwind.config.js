@@ -5,6 +5,41 @@ module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './lib/**/*.js'],
   darkMode: 'class',
+  daisyui: {
+    themes: [
+      {
+        light: {
+          fontFamily:
+            'Fira Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace',
+
+          primary: '#054a91',
+          'primary-focus': '#043362',
+          'primary-content': '#ffffff',
+          secondary: '#c52184',
+          'secondary-focus': '#9d1b69',
+          'secondary-content': '#ffffff',
+          accent: '#2ec4b6',
+          'accent-focus': '#239589',
+          'accent-content': '#ffffff',
+          neutral: '#3d4451',
+          'neutral-focus': '#2a2e37',
+          'neutral-content': '#ffffff',
+          'base-100': '#fafaf9',
+          'base-200': '#f9fafb',
+          'base-300': '#d1d5db',
+          'base-content': '#1f2937',
+          info: '#2094f3',
+          success: '#009485',
+          warning: '#ff9900',
+          error: '#ff5724',
+          '--rounded-box': '0',
+          '--rounded-btn': '0',
+          '--rounded-badge': '0',
+          '--tab-radius': '0',
+        },
+      },
+    ],
+  },
   theme: {
     extend: {
       spacing: {
@@ -17,11 +52,9 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Fira Mono', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.blue,
-        gray: colors.trueGray,
         code: {
           green: '#b5f4a5',
           yellow: '#ffe484',
@@ -159,5 +192,5 @@ module.exports = {
   variants: {
     typography: ['dark'],
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('daisyui')],
 }

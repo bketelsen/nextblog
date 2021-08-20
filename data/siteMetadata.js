@@ -12,8 +12,10 @@ const siteMetadata = {
   email: 'mail@bjk.fyi',
   github: 'https://github.com/bketelsen',
   twitter: 'https://twitter.com/bketelsen',
+  instagram: 'https://instagram.com/bketelsen',
   facebook: 'https://facebook.com/bketelsen',
   youtube: 'https://youtube.com/bketelsen',
+  twitch: 'https://twitch.tv/bketelsen',
   linkedin: 'https://www.linkedin.com/bketelsen',
   locale: 'en-US',
   analytics: {
