@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import Link from './Link'
-import SocialMedia from './SocialMedia'
-import SubscribeCTA from './SubscribeCTA'
 
 function Hero() {
   return (
