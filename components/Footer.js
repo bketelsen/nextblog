@@ -1,6 +1,7 @@
 import FooterLinkColumn from './FooterLinkColumn'
 import Link from 'next/link'
 import SocialMedia from './SocialMedia'
+import siteMetadata from '@/data/siteMetadata'
 
 function Footer() {
   return (
@@ -30,10 +31,6 @@ function Footer() {
                       label: 'About',
                       link: '/about',
                     },
-                    {
-                      label: 'Contact',
-                      link: '/contact',
-                    },
                   ]}
                 />
               </div>
@@ -44,7 +41,7 @@ function Footer() {
               <div className="py-1 text-sm font-semibold">
                 Copyright © {new Date().getFullYear()}{' '}
                 <Link href="/" passHref>
-                  {process.env.siteTitle}
+                  {siteMetadata.title}
                 </Link>
               </div>
             </div>

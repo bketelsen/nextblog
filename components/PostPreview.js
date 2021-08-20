@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { formatContentfulDate } from '../utils/helpers'
+import { formatDate } from '../utils/helpers'
 
 function PostPreview({ slug, date, tags, featured, image, title, description }) {
   const postHref = `/blog/${slug}`
@@ -22,7 +22,7 @@ function PostPreview({ slug, date, tags, featured, image, title, description }) 
         <div className="card-body hover:bg-accent">
           <h2 className="card-title">{title}</h2>
           {featured && <div className="mb-2 uppercase badge badge-accent">featured</div>}
-          <p className="mb-2"> {formatContentfulDate(date)}</p>
+          <p className="mb-2"> {formatDate(date)}</p>
           <p>{description}</p>
           <div className="justify-center pt-2">
             {tags &&

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import MobileNav from './MobileNav'
+import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 
 function Nav() {
@@ -8,7 +9,7 @@ function Nav() {
     <>
       <div className="mb-2 shadow-lg navbar bg-neutral text-neutral-content rounded-box">
         <div className="px-2 mx-2 navbar-start">
-          <span className="text-lg font-bold"> {process.env.siteTitle}</span>
+          <span className="text-lg font-bold"> {siteMetadata.headerTitle}</span>
         </div>
         <div className="hidden px-2 mx-2 navbar-center md:flex">
           <div className="flex items-stretch">

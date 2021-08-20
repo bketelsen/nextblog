@@ -7,13 +7,13 @@ import siteMetadata from '@/data/siteMetadata'
 function Post({ post }) {
   // console.log('post', post)
   const { frontMatter } = post
-  const { slug, fileName, date, title, tags } = frontMatter
+  const { slug } = frontMatter
 
   return (
-    <>
+    <div>
       <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} {...frontMatter} />
       <PostContent post={post} />
-    </>
+    </div>
   )
 }
 

@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "next-remote-watch ./data",
     "dev": "next dev",
+    "prebuild": "node scripts/ogimage.js",
     "build": "next build",
-    "start": "next start"
+    "serve": "next start",
+    "analyze": "cross-env ANALYZE=true next build",
+    "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^14.1.3",
-    "@contentful/rich-text-types": "^14.1.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",

@@ -6,7 +6,6 @@ import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 
 function BlogPage({ posts }) {
-  const pageTitle = `Blog | ${process.env.siteTitle}`
   const [filteredPosts, setFilteredPosts] = useState(posts)
 
   function filterResults(searchTerm) {

@@ -1,25 +1,56 @@
 const withPWA = require('next-pwa')
-
-module.exports = withPWA({
-  pwa: {
-    dest: 'public',
-    disable: process.env.NODE_ENV === 'development',
-  },
-  env: {
-    siteTitle: 'Brian Ketelsen',
-    siteDescription: 'Next Tails Blog.',
-    siteKeywords: 'nextjs, tailwindcss, contentful, blog',
-    siteUrl: 'https://next-tails-blog.vercel.app/',
-    siteImagePreviewUrl: '/images/main-img-preview.jpg',
-    mainRoutes: ['/index', '/about', '/blog'], // for sitemap; blog posts are generated dynamically
-    blogRoute: '/blog', // for sitemap
-    recentBlogNum: 3, // no. of blogs to display in recent posts
-    twitterHandle: '@bketelsen',
-    twitterUrl: 'https://twitter.com/bketelsen',
-    facebookUrl: 'https://facebook.com/bketelsen',
-    instagramUrl: 'https://instagram.com/bketelsen',
-    pinterestUrl: 'https://pinterest.com',
-    youtubeUrl: 'https://youtube.com/bketelsen',
-    twitchUrl: 'https://twitch.tv/bketelsen',
-  },
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
 })
+const { withPlausibleProxy } = require('next-plausible')
+const { withGoogleFonts } = require('nextjs-google-fonts')
+
+module.exports = withPWA(
+  withGoogleFonts(
+    withPlausibleProxy()(
+      withBundleAnalyzer({
+        pwa: {
+          dest: 'public',
+          disable: process.env.NODE_ENV === 'development',
+        },
+        googleFonts: {
+          fonts: ['https://fonts.googleapis.com/css2?family=Inter&display=swap'],
+        },
+        reactStrictMode: true,
+        pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+        eslint: {
+          dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
+        },
+        experimental: { esmExternals: true },
+        webpack: (config, { dev, isServer }) => {
+          config.module.rules.push({
+            test: /\.(png|jpe?g|gif|mp4)$/i,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  publicPath: '/_next',
+                  name: 'static/media/[name].[hash].[ext]',
+                },
+              },
+            ],
+          })
+
+          config.module.rules.push({
+            test: /\.svg$/,
+            use: ['@svgr/webpack'],
+          })
+          if (!dev && !isServer) {
+            // Replace React with Preact only in client production build
+            Object.assign(config.resolve.alias, {
+              react: 'preact/compat',
+              'react-dom/test-utils': 'preact/test-utils',
+              'react-dom': 'preact/compat',
+            })
+          }
+          return config
+        },
+      })
+    )
+  )
+)

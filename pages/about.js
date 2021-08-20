@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import { PageSEO } from '@/components/SEO'
 import SectionContainer from '@/components/SectionContainer'
-import SocialMedia from '../components/SocialMedia'
+import SocialMedia from '@/components/SocialMedia'
 import siteMetadata from '@/data/siteMetadata'
 
 function AboutPage() {
-  const pageTitle = `About | ${process.env.siteTitle}`
   return (
     <SectionContainer>
       <div className="container min-h-screen mx-auto mb-20">
@@ -16,7 +15,7 @@ function AboutPage() {
             <Image
               className="object-cover w-64 h-64 mx-auto my-8 rounded-full"
               src="/static/images/brian-head.jpeg"
-              alt="silver fox, amirite"
+              alt="Brian Ketelsen"
               height={300}
               width={300}
             />

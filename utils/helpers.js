@@ -1,4 +1,4 @@
-export function formatContentfulDate(contentfulDate) {
+export function formatDate(contentfulDate) {
   const convertedDate = new Date(contentfulDate)
 
   const year = convertedDate.getFullYear()
