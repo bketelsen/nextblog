@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from './Link'
 import SocialMedia from './SocialMedia'
 import SubscribeCTA from './SubscribeCTA'
 
@@ -26,7 +27,9 @@ function Hero() {
             incididunt ut labore et dolore magna aliqua. Cras sed felis eget velit aliquet sagittis
             id. nullam eget felis eget..
           </p>
-          <button className="btn btn-primary">More About Me</button>
+          <Link role="button" className="btn btn-primary" href="/about">
+            More About Me
+          </Link>
         </div>
       </div>
     </div>
