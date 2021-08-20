@@ -9,7 +9,7 @@ function Hero() {
         <Image
           height={600}
           width={600}
-          className="max-w-sm rounded-lg shadow-2xl"
+          className="max-w-xs rounded-lg shadow-2xl"
           src="/static/images/brian-head.jpeg"
           alt="Brian Ketelsen"
         />
