@@ -21,9 +21,8 @@ function Hero() {
             I'm Brian
           </h1>
           <p className="mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Cras sed felis eget velit aliquet sagittis
-            id. nullam eget felis eget..
+            I'm a life-long developer, systems engineer, and IT leader who thrives on experimenting,
+            learning, and teaching.
           </p>
           <Link role="button" className="btn btn-primary" href="/about">
             More About Me

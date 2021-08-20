@@ -20,23 +20,35 @@ function AboutPage() {
               width={300}
             />
           </div>
-          <p className="mt-6 sm:text-lg md:text-xl">
-            {' '}
-            <span role="img" aria-label="waving hand">
-              👋
-            </span>{' '}
-            Hello! I'm Brian. This is my blog.
-          </p>
-          <p className="mt-6 sm:text-lg md:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
-          </p>
-          <p className="mt-6 sm:text-lg md:text-xl">Follow me on Social Media.</p>
-          <SocialMedia />
+          <div className="container p-4 mx-auto text-lg prose xl:prose-xl sm:p-8">
+            <p className="mt-6 sm:text-lg md:text-xl">
+              {' '}
+              <span role="img" aria-label="waving hand">
+                👋
+              </span>{' '}
+              Hello! I'm Brian. This is my blog.
+            </p>
+            <p className="mt-6 sm:text-lg md:text-xl">
+              I'm a cloud developer advocate at Microsoft Azure. I lead a team of advocates who
+              focus on Open Source languages and cloud tools.
+            </p>
+            <p className="mt-6 sm:text-lg md:text-xl">
+              I've worn many hats along my journey. I believe that having a broad range of
+              experience enables me to see problems from a broader perspective.
+            </p>
+            <p className="mt-6 sm:text-lg md:text-xl">Some of my previous roles:</p>
+            <ul>
+              <li>Sybase, Oracle, MSSQL DBA</li>
+              <li>Data Warehouse Architect</li>
+              <li>Web Developer</li>
+              <li>Distributed Systems Engineer</li>
+              <li>CTO, CIO, COO</li>
+            </ul>
+
+            <p className="mt-6 sm:text-lg md:text-xl">
+              Thanks for stopping by, I hope you find some useful information here.
+            </p>
+          </div>
         </section>
       </div>
     </SectionContainer>
