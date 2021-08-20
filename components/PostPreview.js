@@ -7,7 +7,7 @@ function PostPreview({ path, slug, date, tags, featured, image, title, descripti
 
   return (
     <Link href={postHref} passHref>
-      <div className="shadow-md hover:shadow-2xl card">
+      <div className="shadow-md cursor-pointer hover:shadow-2xl card">
         <figure>
           {image && (
             <Image
