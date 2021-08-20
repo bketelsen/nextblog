@@ -10,7 +10,7 @@ module.exports = {
       {
         light: {
           fontFamily:
-            'ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace',
+            'Fira Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace',
 
           primary: '#054a91',
           'primary-focus': '#043362',
@@ -52,7 +52,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Fira Mono', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         code: {

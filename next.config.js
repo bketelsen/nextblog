@@ -14,7 +14,9 @@ module.exports = withPWA(
           disable: process.env.NODE_ENV === 'development',
         },
         googleFonts: {
-          fonts: ['https://fonts.googleapis.com/css2?family=Inter&display=swap'],
+          fonts: [
+            'https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;600;700&display=swap',
+          ],
         },
         reactStrictMode: true,
         pageExtensions: ['js', 'jsx', 'md', 'mdx'],
