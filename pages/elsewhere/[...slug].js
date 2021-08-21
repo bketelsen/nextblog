@@ -1,7 +1,7 @@
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
 
-import { BlogSEO } from '@/components/SEO'
-import PostContent from '@/components/PostContent'
+import ElsewhereContent from '@/components/ElsewhereContent'
+import { ElsewhereSEO } from '@/components/SEO'
 import fs from 'fs'
 import generateRss from '@/lib/generate-rss'
 import siteMetadata from '@/data/siteMetadata'
@@ -13,8 +13,8 @@ function Post({ post }) {
 
   return (
     <div>
-      <BlogSEO url={`${siteMetadata.siteUrl}/elsewhere/${slug}`} {...frontMatter} />
-      <PostContent post={post} />
+      <ElsewhereSEO url={`${siteMetadata.siteUrl}/elsewhere/${slug}`} {...frontMatter} />
+      <ElsewhereContent post={post} />
     </div>
   )
 }
