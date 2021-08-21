@@ -1,6 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-import { GoogleFonts } from 'nextjs-google-fonts/GoogleFonts'
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
@@ -11,7 +10,11 @@ class MyDocument extends Document {
     return (
       <Html lang="en" data-theme="light">
         <Head>
-          {GoogleFonts()}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+
           <meta name="theme-color" content="blue" />
           <meta name="mobile-web-app-capable" content="yes" />
 
