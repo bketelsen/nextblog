@@ -4,7 +4,7 @@
 [event]: # 'Stuttgart Go Meetup'
 [eventurl]: # 'https://www.meetup.com/Stuttgart-Gophers/'
 [title]: # 'Go Modules'
-[image]: # '/images/logo.png'
+[image]: # 'images/logo.png'
 [imagealt]: # 'Stuttgart Go Meetup'
 [date]: # 'September 20, 2018'
 [videourl]: # 'https://www.youtube.com/watch?v=V8FQNen4WAA'
@@ -241,6 +241,6 @@ Now you can build even when Github is down!
 
 ---
 
-<!-- .slide: data-background-image="/images/gitpitch-audience.jpg" -->
+<!-- .slide: data-background-image="images/gitpitch-audience.jpg" -->
 
 ## Thank You
