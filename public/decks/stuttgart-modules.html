@@ -7,6 +7,7 @@
     <title>reveal-md</title>
     <link rel="shortcut icon" href="./favicon.ico"/>
     <link rel="stylesheet" href="./dist/reveal.css" />
+	<link rel="stylesheet" href="/fontawesome/css/all.css" />
     <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/zenburn.css" />
 
@@ -15,28 +16,31 @@
     <div class="reveal">
       <div class="slides"><section  data-markdown><script type="text/template"># Go Modules
 
-[twitter]: # (@bketelsen)
-[event]: # (Stuttgart Go Meetup)
-[eventurl]: # (https://www.meetup.com/Stuttgart-Gophers/)
-[title]: # (Go Modules)
-[image]: # (images/logo.png)
-[imagealt]: # (Stuttgart Go Meetup)
-[date]: # (September 20, 2018)
-[videourl]: # (https://www.youtube.com/watch?v=V8FQNen4WAA)
+[twitter]: # '@bketelsen'
+[event]: # 'Stuttgart Go Meetup'
+[eventurl]: # 'https://www.meetup.com/Stuttgart-Gophers/'
+[title]: # 'Go Modules'
+[image]: # 'images/logo.png'
+[imagealt]: # 'Stuttgart Go Meetup'
+[date]: # 'September 20, 2018'
+[videourl]: # 'https://www.youtube.com/watch?v=V8FQNen4WAA'
 
 ### Simplify Go Development
+
 Slides: [cda.ms/FV](https://cda.ms/FV)
+
 <!-- .slide: data-transition="zoom" -->
 </script></section><section  data-markdown><script type="text/template">
 ## The Basics
 
 - [Go Modules Wiki Page](https://cda.ms/FN)
 - Proposal [https://research.swtch.com/vgo](https://research.swtch.com/vgo)
-- Requires Go 1.11</script></section><section  data-markdown><script type="text/template">
+- Requires Go 1.11
+</script></section><section  data-markdown><script type="text/template">
 ## Two Ways To Use Modules
 
 - Invoke the `go` command outside your $GOPATH
-- Set `GO111MODULE=on` 
+- Set `GO111MODULE=on`
 </script></section><section  data-markdown><script type="text/template">
 ## Definitions & New Terms
 
@@ -49,7 +53,7 @@ Slides: [cda.ms/FV](https://cda.ms/FV)
 
 ## Module
 
-```A module is a collection of related Go packages that are versioned together as a single unit. Most often, a single version-control repository corresponds exactly to a single module, but alternatively, a single version-control repository can hold multiple modules.```
+`A module is a collection of related Go packages that are versioned together as a single unit. Most often, a single version-control repository corresponds exactly to a single module, but alternatively, a single version-control repository can hold multiple modules.`
 
 --
 
@@ -60,6 +64,7 @@ A module is a tree (directory) of Go source files with a `go.mod` file in the ro
 --
 
 ## Example go.mod File
+
 ```
 module github.com/my/module/v3
 
@@ -69,6 +74,7 @@ require (
     github.com/additional/dependency/v4 v4.0.0
 )
 ```
+
 --
 
 ## Creating a Module
@@ -80,7 +86,8 @@ git init
 git remote add origin git@github.com:bketelsen/thing
 go mod init
 ```
-* New go.mod file infers module path from VCS
+
+- New go.mod file infers module path from VCS
 
 --
 
@@ -91,7 +98,8 @@ mkdir thing
 cd thing
 go mod init github.com/bketelsen/thing
 ```
-* Manually specify module name
+
+- Manually specify module name
 
 --
 
@@ -104,9 +112,10 @@ require (
     github.com/additional/dependency/v4 v4.0.0
 )
 ```
-* Semantic Version Numbers
-* Version is part of module path!
-* v1 is implied
+
+- Semantic Version Numbers
+- Version is part of module path!
+- v1 is implied
 
 --
 
@@ -117,9 +126,10 @@ require (
     github.com/additional/dependency/v4 v4.0.0
 )
 ```
-* /v4 is package name 
-* Allows other versions to be used in the same build
-* Controversial, but makes good sense
+
+- /v4 is package name
+- Allows other versions to be used in the same build
+- Controversial, but makes good sense
 </script></section><section  data-markdown><script type="text/template">
 ## DEMO
 </script></section><section  data-markdown><script type="text/template">
@@ -135,33 +145,41 @@ require (
 )
 replace github.com/foo/bar github.com/fork/bar
 ```
+
 Specify a fork or local development package to use
 </script></section><section  data-markdown><script type="text/template">
 ## Replace
 
 ```
-replace github.com/foo/bar ../../bar 
+replace github.com/foo/bar ../../bar
 ```
+
 Supports relative paths too
-</script></section><section  data-markdown><script type="text/template">## gohack
+</script></section><section  data-markdown><script type="text/template">
+## gohack
 
 [github.com/rogpeppe/gohack](https://github.com/rogpeppe/gohack)
 
 ```
 gohack github.com/broken/thing
 ```
-* Clones editable version of package in $HOME/gohack/...
-* Modifies go.mod file for you
+
+- Clones editable version of package in $HOME/gohack/...
+- Modifies go.mod file for you
 </script></section><section  data-markdown><script type="text/template">
 ## Big Change
+
 Download Protocol
 
 Old:
+
 ```
 go get github.com/bketelsen/thing -->
   git clone https://github.com/bketelsen/thing
 ```
+
 New:
+
 ```
 go get github.com/bketelsen/thing -->
   GET github.com/bketelsen/thing/@v/list
@@ -181,35 +199,37 @@ Published modules are immutable.
 export GOPROXY=my.proxy.com
 go get github.com/bketelsen/thing
 ```
+
 Fetches `.mod`, `.info`, `.zip` from proxy server
-</script></section><section  data-markdown><script type="text/template">## REPEATABLE BUILDS
+</script></section><section  data-markdown><script type="text/template">
+## REPEATABLE BUILDS
 
 Now you can build even when Github is down!
-* Athens [github.com/gomods/athens](https://github.com/gomods/athens)
-* Documentation[docs.gomods.io](https://docs.gomods.io)
-* export GOPROXY=https://microsoftgoproxy.azurewebsites.net
+
+- Athens [github.com/gomods/athens](https://github.com/gomods/athens)
+- Documentation[docs.gomods.io](https://docs.gomods.io)
+- export GOPROXY=https://microsoftgoproxy.azurewebsites.net
 </script></section><section  data-markdown><script type="text/template">
 ## DEMO
 </script></section><section  data-markdown><script type="text/template">
 ## Use Modules Today
 
-* GO111MODULE=on
-* Work outside GOPATH
-* Use a Public Proxy Server
-* Run Your OWN Proxy Server
+- GO111MODULE=on
+- Work outside GOPATH
+- Use a Public Proxy Server
+- Run Your OWN Proxy Server
 </script></section><section  data-markdown><script type="text/template">
 ### Questions?
 
 <br>
 
-* [@bketelsen](https://twitter.com/bketelsen)
-* [github.com/bketelsen](https://github.com/bketelsen)
-* [github.com/gomods](https://github.com/gomods)
-
-</script></section><section  data-markdown><script type="text/template"><!-- .slide: data-background-image="images/gitpitch-audience.jpg" -->
+- [@bketelsen](https://twitter.com/bketelsen)
+- [github.com/bketelsen](https://github.com/bketelsen)
+- [github.com/gomods](https://github.com/gomods)
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background-image="images/gitpitch-audience.jpg" -->
 
 ## Thank You
-
 </script></section></div>
     </div>
 

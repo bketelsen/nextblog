@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "next-remote-watch ./data",
-    "decks": "reveal-md data/decks/ --static public/decks --static-dirs=data/decks/images",
+    "decks": "reveal-md data/decks/ --preprocessor preproc.js --template data/decks/custom.html --static public/decks --static-dirs=data/decks/images",
     "dev": "next dev",
     "og": "node scripts/ogimage.js",
     "build": "next build",

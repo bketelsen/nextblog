@@ -7,6 +7,7 @@
     <title>reveal-md</title>
     <link rel="shortcut icon" href="./favicon.ico"/>
     <link rel="stylesheet" href="./dist/reveal.css" />
+	<link rel="stylesheet" href="/fontawesome/css/all.css" />
     <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/zenburn.css" />
 
@@ -15,14 +16,14 @@
     <div class="reveal">
       <div class="slides"><section  data-markdown><script type="text/template"># Athens: The Center of Knowledge
 
-[twitter]: # (@bketelsen)
-[event]: # (GopherconUK)
-[eventurl]: # (https://www.gophercon.co.uk/)
-[title]: # (Athens: The Center of Knowledge)
-[image]: # (images/athens.jpg)
-[imagealt]: # (GopherconUK)
-[date]: # (August 3, 2018)
-[videourl]: # (https://www.gophercon.co.uk/)
+[twitter]: # '@bketelsen'
+[event]: # 'GopherconUK'
+[eventurl]: # 'https://www.gophercon.co.uk/'
+[title]: # 'Athens: The Center of Knowledge'
+[image]: # 'images/athens.jpg'
+[imagealt]: # 'GopherconUK'
+[date]: # 'August 3, 2018'
+[videourl]: # 'https://www.gophercon.co.uk/'
 </script></section><section  data-markdown><script type="text/template">
 ## About Me
 
@@ -36,17 +37,17 @@
 ## This Talk
 
 [https://cda.ms/B6](https://cda.ms/B6)
-
-</script></section><section  data-markdown><script type="text/template">## Athens
-<!-- .slide: data-background-image="images/athens.jpg" -->
-
 </script></section><section  data-markdown><script type="text/template">
+## Athens
 
+<!-- .slide: data-background-image="images/athens.jpg" -->
+</script></section><section  data-markdown><script type="text/template">
 ## Athens Is
 
 <br/>
 <i class='fas fa-check'></i> Umbrella Project Name
-</script></section><section  data-markdown><script type="text/template">## Athens Is
+</script></section><section  data-markdown><script type="text/template">
+## Athens Is
 
 <br/>
 <i class='fas fa-check'></i> Caching Proxy Server
@@ -78,24 +79,22 @@
 </script></section><section  data-markdown><script type="text/template">
 ## What's In It For You?
 
-- Repeatable Builds 
+- Repeatable Builds
 - Every Time
 - Even when Github/Gitlab/Bitbucket is down
 - Local or closer caching proxies
 </script></section><section  data-markdown><script type="text/template">
-
 ## Specification
 
-- API for the `go` command 
+- API for the `go` command
 - Specification for module validation
 - Specification for trust protocol
-
 </script></section><section  data-markdown><script type="text/template">
 ## Go Command
 
-- Proxy support already included! 
-- Set the GOPROXY environment variable 
-- GOPROXY=https://some.address 
+- Proxy support already included!
+- Set the GOPROXY environment variable
+- GOPROXY=https://some.address
 </script></section><section  data-markdown><script type="text/template">
 ## Module Validation
 
@@ -105,16 +104,16 @@
 </script></section><section  data-markdown><script type="text/template">
 ## Notaries
 
-- Notaries download, verify hash, then sign modules 
-- Notaries are completely independent 
-- A `signed` module will contain a `certificate` 
+- Notaries download, verify hash, then sign modules
+- Notaries are completely independent
+- A `signed` module will contain a `certificate`
 </script></section><section  data-markdown><script type="text/template">
 ## Publishers
 
-- Publishers will collect certificates from Notaries 
-- Certificates will be published at a `/log` API endpoint 
-- Interested `Subscribers` may query the `/log` API 
-- The `/log` API will support `after=` and `match=` for filtering 
+- Publishers will collect certificates from Notaries
+- Certificates will be published at a `/log` API endpoint
+- Interested `Subscribers` may query the `/log` API
+- The `/log` API will support `after=` and `match=` for filtering
 </script></section><section  data-markdown><script type="text/template">
 ## Notaries + Publishers
 
@@ -127,10 +126,10 @@
 </script></section><section  data-markdown><script type="text/template">
 ## Authenticated Proxies
 
-- The `go` command will support authenticated proxies 
-- Trusted keys will be stored locally 
-- `$GOPATH/go.key` and/or `$GOROOT/go.key` 
-- Keys will be weighted, with a `1.0` score required for acceptance 
+- The `go` command will support authenticated proxies
+- Trusted keys will be stored locally
+- `$GOPATH/go.key` and/or `$GOROOT/go.key`
+- Keys will be weighted, with a `1.0` score required for acceptance
 </script></section><section  data-markdown><script type="text/template">
 ## Example go.key file
 
@@ -142,7 +141,8 @@
 	key 0.5 MyCompany s1:YXJaDOW...7IFlc=
 	key 0.5 Google s1:pTFZ+webXa...f7SvSU=
 	key 0.5 Microsoft s1:XEGD...eQQkkshI=
-```</script></section><section  data-markdown><script type="text/template">
+```
+</script></section><section  data-markdown><script type="text/template">
 ## Public Proxies
 
 - Geographically distributed proxy servers
@@ -150,32 +150,31 @@
 </script></section><section  data-markdown><script type="text/template">
 ## Run Your Own Proxy
 
-- Run proxy locally, inside your firewall 
-- Include/Exclude listing for modules 
-- Prevent undesired modules from being used 
-- Like `exclude github.com/gobuffalo/*` 
-- Or `exclude github.com/*` 
+- Run proxy locally, inside your firewall
+- Include/Exclude listing for modules
+- Prevent undesired modules from being used
+- Like `exclude github.com/gobuffalo/*`
+- Or `exclude github.com/*`
 </script></section><section  data-markdown><script type="text/template">
 ## Demo!
 </script></section><section  data-markdown><script type="text/template">
-
 ## Decentralized, Federated, Independent
 
 - Services are decentralized, independent
 - Signed packages mean no worries about MITM
-- All Open Source 
-- Protocols are open 
+- All Open Source
+- Protocols are open
 - External services are interfaces, use your favorites
 </script></section><section  data-markdown><script type="text/template">
 ## Protocols Will Be Published
 
-- Proposal to the `golang` repo soon 
-- Open specification means anyone can participate 
-- What will YOU build on top of the protocol? 
+- Proposal to the `golang` repo soon
+- Open specification means anyone can participate
+- What will YOU build on top of the protocol?
 </script></section><section  data-markdown><script type="text/template">
 ## Protocol Is Important
 
-- Building block for future tools 
+- Building block for future tools
 </script></section><section  data-markdown><script type="text/template">
 ## Future Ideas - Code Provenance
 
@@ -184,29 +183,29 @@
 </script></section><section  data-markdown><script type="text/template">
 ## Your Ideas On Top
 
-- Code Quality 
-- Code Metrics 
+- Code Quality
+- Code Metrics
 - Vanity Domain Server + Proxy
 </script></section><section  data-markdown><script type="text/template">
 ## Foundation
 
-- Long Term Vision 
-- Multiple Companies Participating 
-- Members will host Notaries 
-- Certificate Servers 
-- Public Proxies 
+- Long Term Vision
+- Multiple Companies Participating
+- Members will host Notaries
+- Certificate Servers
+- Public Proxies
 </script></section><section  data-markdown><script type="text/template">
 ## Foundation
 
-- Allows Notaries to live without SPOF 
+- Allows Notaries to live without SPOF
 - Microsoft, Google already committed
 - Others coming soon
 </script></section><section  data-markdown><script type="text/template">
 ## What's Next?
 
-- Foundation being formed now 
-- Notaries coming online soon 
-- Public proxies available soon 
+- Foundation being formed now
+- Notaries coming online soon
+- Public proxies available soon
 - Proposal for spec submitted soon
 </script></section><section  data-markdown><script type="text/template">
 ## Open Source
@@ -235,9 +234,8 @@
 [@fa[github]](bketelsen)
 
 [@fa[github]](gomods)
-
-
-</script></section><section  data-markdown><script type="text/template"><!-- .slide: data-background-image="images/gitpitch-audience.jpg" -->
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background-image="images/gitpitch-audience.jpg" -->
 
 ## Thank You
 </script></section></div>

@@ -20,16 +20,22 @@
 
 ---
 
+@slide[background="#ff00FF"]
+
 ## This Talk
 
 [https://cda.ms/jP](https://cda.ms/jP)
 [video](https://youtu.be/MzTcsI6tn-0)
 
+brian @fas[heart] @fab[twitter]
+
+@fab[twitter]
+
 ---
 
 ## My Hero
 
-<!-- .slide: data-background-image="images/brian.jpeg" -->
+@slide[background-image="images/brian.jpeg"]
 
 ---
 

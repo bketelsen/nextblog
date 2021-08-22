@@ -7,6 +7,7 @@
     <title>reveal-md</title>
     <link rel="shortcut icon" href="./favicon.ico"/>
     <link rel="stylesheet" href="./dist/reveal.css" />
+	<link rel="stylesheet" href="/fontawesome/css/all.css" />
     <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/zenburn.css" />
 
@@ -15,14 +16,14 @@
     <div class="reveal">
       <div class="slides"><section  data-markdown><script type="text/template"># Repeatable Builds with vgo
 
-[twitter]: # (@bketelsen)
-[event]: # (Gophercon Russia)
-[eventurl]: # (https://www.gophercon-russia.ru/)
-[title]: # (Repeatable Builds with vgo)
-[image]: # (images/logo.png)
-[imagealt]: # (Gophercon Russia)
-[date]: # (March 17, 2018)
-[videourl]: # (https://www.gophercon-russia.ru/)
+[twitter]: # '@bketelsen'
+[event]: # 'Gophercon Russia'
+[eventurl]: # 'https://www.gophercon-russia.ru/'
+[title]: # 'Repeatable Builds with vgo'
+[image]: # 'images/logo.png'
+[imagealt]: # 'Gophercon Russia'
+[date]: # 'March 17, 2018'
+[videourl]: # 'https://www.gophercon-russia.ru/'
 </script></section><section  data-markdown><script type="text/template">
 ## About Me
 
@@ -40,14 +41,13 @@
 ## History of Building Go
 
 - 2009 6g, 6l - Makefiles
-- 2010 goinstall 
+- 2010 goinstall
 - 2011 go command
 - 2014 gopkg.in
 - 2014 semver proposal
 - 2015 go 1.5 vendor experiment
 - 2013-2018 godep,glide,gb,others
 </script></section><section  data-markdown><script type="text/template">
-
 ## 2018
 
 <br>
@@ -55,31 +55,30 @@
 @fa[star gp-tip](vgo)
 
 Documentation [https://research.swtch.com/vgo](https://research.swtch.com/vgo)
-Code [https://github.com/golang/vgo](https://github.com/golang/vgo)</script></section><section  data-markdown><script type="text/template">
+Code [https://github.com/golang/vgo](https://github.com/golang/vgo)
+</script></section><section  data-markdown><script type="text/template">
 ## vgo
 
 <br/>
 <i class='fas fa-check'></i> Defines Go Modules
-
-</script></section><section  data-markdown><script type="text/template">## vgo
-
-<br/>
-<i class='fas fa-check'></i> Proposed Modification to "go" Tool
-
 </script></section><section  data-markdown><script type="text/template">
 ## vgo
 
-- The Import Compatibility Rule 
-- Minimal Version Selection 
-- Semantic Import Versioning
-- Graceful API Updates 
-- Reproducible Builds 
-- Verifiable Builds 
-- Verified Builds 
-- Proxy Server Support
-
+<br/>
+<i class='fas fa-check'></i> Proposed Modification to "go" Tool
 </script></section><section  data-markdown><script type="text/template">
-## The Import Compatibility Rule 
+## vgo
+
+- The Import Compatibility Rule
+- Minimal Version Selection
+- Semantic Import Versioning
+- Graceful API Updates
+- Reproducible Builds
+- Verifiable Builds
+- Verified Builds
+- Proxy Server Support
+</script></section><section  data-markdown><script type="text/template">
+## The Import Compatibility Rule
 
 > If an old package and a new package have the same import path, the new package must be backwards-compatible with the old package.
 </script></section><section  data-markdown><script type="text/template">
@@ -89,10 +88,7 @@ Code [https://github.com/golang/vgo](https://github.com/golang/vgo)</script></se
 </script></section><section  data-markdown><script type="text/template">
 ## Semantic Import Versioning
 
-
-
 ---?image=assets/image/impver.png&size=auto 60%&color=white
-
 </script></section><section  data-markdown><script type="text/template">
 ## Graceful API Updates
 </script></section><section  data-markdown><script type="text/template">
@@ -131,6 +127,7 @@ require (
 	"github.com/gorilla/mux" v1.6.0
 )
 ```
+
 @[1](Module Declaration)
 @[3-6](Dependencies, with version specified)
 </script></section><section  data-markdown><script type="text/template">
@@ -141,12 +138,13 @@ require (
 ## Verifiable Builds
 
 ```text
-goversion -m captainhook 
+goversion -m captainhook
 captainhook go1.10
 	path  github.com/bketelsen/captainhook
 	mod   github.com/bketelsen/captainhook  (devel)
 	dep   github.com/gorilla/mux            v1.6.0
 ```
+
 @[1](rsc.io/goversion)
 @[2](Binary name and Go version used to build it)
 @[3](Import Path)
@@ -169,7 +167,8 @@ github.com/gorilla/mux v1.6.0 h1:UykbtMB/w5No2LmE16gINgLj+r/vbziTgaoERQv6U+0=
 $ vgo verify
 all modules verified
 ```
-</script></section><section  data-markdown><script type="text/template">## Verified Builds
+</script></section><section  data-markdown><script type="text/template">
+## Verified Builds
 
 ```bash
 $ vgo verify
@@ -177,8 +176,6 @@ github.com/gorilla/mux v1.6.0: dir has been modified (...)
 ```
 </script></section><section  data-markdown><script type="text/template">
 ## Demo
-
-
 </script></section><section  data-markdown><script type="text/template">
 ## How?
 
@@ -189,8 +186,6 @@ github.com/gorilla/mux v1.6.0: dir has been modified (...)
 ### $GOPATH/src/v/$PACKAGE/@v
 </script></section><section  data-markdown><script type="text/template">
 ## Demo
-
-
 </script></section><section  data-markdown><script type="text/template">
 ## Getting Started
 
@@ -198,13 +193,11 @@ github.com/gorilla/mux v1.6.0: dir has been modified (...)
 - Add go.mod file to your repository
 - There is no step three
 </script></section><section  data-markdown><script type="text/template">
-
 ## Example with Makefile
 
 [Captain Hook](https://github.com/bketelsen/captainhook)
 
 ### https://github.com/bketelsen/captainhook
-
 </script></section><section  data-markdown><script type="text/template">
 ## Proxy Server Support
 
@@ -213,33 +206,31 @@ $ GOPROXY=https://gomods.io vgo build
 ...
 ```
 </script></section><section  data-markdown><script type="text/template">
-## Proxy Server 
+## Proxy Server
 
 - Keeps copies of modules for faster delivery
-- Set with environment variable 
-  + GOPROXY=https://1.5.12.10/proxy vgo build
-  + export GOPROXY=https://1.5.12.10/proxy
+- Set with environment variable
+  - GOPROXY=https://1.5.12.10/proxy vgo build
+  - export GOPROXY=https://1.5.12.10/proxy
 - Support for whitelists and/or blacklist
-- Fixed set of "official" proxies 
-- But you can run your own! 
+- Fixed set of "official" proxies
+- But you can run your own!
 </script></section><section  data-markdown><script type="text/template">
-
-
 ## Proxy
 
-- Athens! 
-- https://github.com/gomods/athens 
-- Open Source 
+- Athens!
+- https://github.com/gomods/athens
+- Open Source
 - Created At Microsoft
 - In cooperation with the Go team
 </script></section><section  data-markdown><script type="text/template">
 ## Registry
 
-- Athens! 
-- https://github.com/gomods/athens 
-- Open Source 
-- Created At Microsoft 
-- In cooperation with the Go team 
+- Athens!
+- https://github.com/gomods/athens
+- Open Source
+- Created At Microsoft
+- In cooperation with the Go team
 </script></section><section  data-markdown><script type="text/template">
 ## Status
 
@@ -267,7 +258,7 @@ $ GOPROXY=https://gomods.io vgo build
 - Separate module from VCS
 - Insulate package from Github control
 </script></section><section  data-markdown><script type="text/template">
-## Hosted Registry 
+## Hosted Registry
 
 - libgo.io
 - gomods.io
@@ -278,9 +269,10 @@ $ GOPROXY=https://gomods.io vgo build
 </script></section><section  data-markdown><script type="text/template">
 ## Hosted Registry
 
-[gopherpacks.io](https://gopherpacks.io) *
+[gopherpacks.io](https://gopherpacks.io) \*
 
-*Coming Soon*</script></section><section  data-markdown><script type="text/template">
+## _Coming Soon_
+
 ## Global Proxies
 
 - Athens running on multiple clouds
@@ -291,12 +283,12 @@ $ GOPROXY=https://gomods.io vgo build
 </script></section><section  data-markdown><script type="text/template">
 ## Foundation
 
-- Long Term Plan for Athens 
-- Multiple Companies Participating 
-- Lets Athens live without SPOF 
-- Microsoft 
-- Google 
-- Yandex ? 
+- Long Term Plan for Athens
+- Multiple Companies Participating
+- Lets Athens live without SPOF
+- Microsoft
+- Google
+- Yandex ?
 </script></section><section  data-markdown><script type="text/template">
 ## Open Source
 
@@ -313,8 +305,8 @@ $ GOPROXY=https://gomods.io vgo build
 [@fa[github]](bketelsen)
 
 [@fa[github]](gomods)
-
-</script></section><section  data-markdown><script type="text/template"><!-- .slide: data-background-image="images/gitpitch-audience.jpg" -->
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background-image="images/gitpitch-audience.jpg" -->
 
 ## Thank You
 </script></section></div>
