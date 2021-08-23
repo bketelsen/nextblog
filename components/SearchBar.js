@@ -17,7 +17,7 @@ function SearchBar({ filterResults }) {
         onChange={(event) => handleSearch(event.target.value)}
         type="search"
         name="search"
-        placeholder="Search"
+        placeholder="Search [tag, title, summary]"
       />
       <button type="submit" className="absolute top-0 right-0 mt-2 mr-10 focus:outline-none">
         <FontAwesomeIcon icon={faSearch} className="w-5 text-gray-400" />

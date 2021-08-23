@@ -7,7 +7,6 @@ import generateRss from '@/lib/generate-rss'
 import siteMetadata from '@/data/siteMetadata'
 
 function Post({ post }) {
-  // console.log('post', post)
   const { frontMatter } = post
   const { slug } = frontMatter
 

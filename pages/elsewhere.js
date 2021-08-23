@@ -9,13 +9,11 @@ function ElsewherePage({ posts }) {
   const [filteredPosts, setFilteredPosts] = useState(posts)
 
   function filterResults(searchTerm) {
-    let tempArray = []
-    posts.forEach((post) => {
-      if (post.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-        tempArray.push(post)
-      }
+    const filteredBlogPosts = posts.filter((frontMatter) => {
+      const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
+      return searchContent.toLowerCase().includes(searchTerm.toLowerCase())
     })
-    setFilteredPosts(tempArray)
+    setFilteredPosts(filteredBlogPosts)
   }
 
   return (
