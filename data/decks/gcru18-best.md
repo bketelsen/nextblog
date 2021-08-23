@@ -11,12 +11,7 @@
 
 ---
 
-## About Me
-
-- Microsoft Azure - Cloud Developer Advocate
-- Twitter: @ashleymcnamara
-- Github: ashleymcnamara
-- GOPHERS!: https://github.com/ashleymcnamara/gophers
+@include[about.md]
 
 ---
 
@@ -27,15 +22,9 @@
 [https://cda.ms/jP](https://cda.ms/jP)
 [video](https://youtu.be/MzTcsI6tn-0)
 
-brian @fas[heart] @fab[twitter]
-
-@fab[twitter]
-
 ---
 
-## My Hero
-
-@slide[background-image="images/brian.jpeg"]
+@include[hero.md]
 
 ---
 
