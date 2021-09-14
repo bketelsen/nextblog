@@ -38,7 +38,7 @@ export default function CloudinaryImg({ publicId, height, width, alt }) {
           left: 0,
         }}
       >
-        <Image width={width} height={height} src={url} alt={alt} unoptimized={true} />
+        <Image width={width} height={height} src={url} alt={alt} />
       </div>
     </div>
   )

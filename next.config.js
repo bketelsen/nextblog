@@ -7,6 +7,9 @@ const { withPlausibleProxy } = require('next-plausible')
 module.exports = withPWA(
   withPlausibleProxy()(
     withBundleAnalyzer({
+      images: {
+        domains: ['res.cloudinary.com'],
+      },
       pwa: {
         dest: 'public',
         disable: process.env.NODE_ENV === 'development',
