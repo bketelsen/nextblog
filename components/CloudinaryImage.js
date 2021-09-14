@@ -3,43 +3,12 @@ import { buildUrl } from 'cloudinary-build-url'
 
 export default function CloudinaryImg({ publicId, height, width, alt }) {
   publicId = 'static/images/' + publicId
-  const urlBlurred = buildUrl(publicId, {
-    cloud: {
-      cloudName: 'bketelsen',
-    },
-    transformations: {
-      effect: {
-        name: 'blur:500',
-        quality: 1,
-      },
-    },
-  })
+
   const url = buildUrl(publicId, {
     cloud: {
       cloudName: 'bketelsen',
     },
   })
 
-  return (
-    <div
-      style={{
-        position: 'relative',
-        height: 0,
-        paddingTop: `${(height / width) * 100}%`,
-        backgroundImage: `url(${urlBlurred})`,
-        backgroundPosition: 'center center',
-        backgroundSize: `100%`,
-      }}
-    >
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-        }}
-      >
-        <Image width={width} height={height} src={url} alt={alt} />
-      </div>
-    </div>
-  )
+  return <Image width={width} height={height} src={url} alt={alt} />
 }
