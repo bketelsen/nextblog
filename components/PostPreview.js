@@ -1,10 +1,9 @@
-import Image from 'next/image'
+import Image from './CloudinaryImage'
 import Link from 'next/link'
 import { formatDate } from '../utils/helpers'
 
 function PostPreview({ path, slug, date, tags, featured, image, title, description }) {
   const postHref = `/${path}/${slug}`
-
   return (
     <Link href={postHref} passHref>
       <div className="shadow-md cursor-pointer hover:shadow-2xl card">
@@ -12,10 +11,10 @@ function PostPreview({ path, slug, date, tags, featured, image, title, descripti
           {image && (
             <Image
               className="object-cover w-full h-48 rounded"
-              width="800"
-              height="450"
+              width={image.width}
+              height={image.height}
               alt={title}
-              src={image}
+              publicId={image.id}
             />
           )}{' '}
         </figure>

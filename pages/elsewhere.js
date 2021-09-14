@@ -34,9 +34,9 @@ function ElsewherePage({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('elsewhere')
+  const posts = await getAllFilesFrontMatter('appearances.json', true)
 
-  return { props: { posts } }
+  return { props: { posts }, revalidate: 60 }
 }
 
 export default ElsewherePage

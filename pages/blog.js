@@ -31,9 +31,9 @@ function BlogPage({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter('articles.json', true)
 
-  return { props: { posts } }
+  return { props: { posts }, revalidate: 60 }
 }
 
 export default BlogPage

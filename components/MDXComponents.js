@@ -1,5 +1,5 @@
 import CustomLink from './Link'
-import Image from './Image'
+import Image from './CloudinaryImage'
 import Pre from './Pre'
 import TOCInline from './TOCInline'
 import { getMDXComponent } from 'mdx-bundler/client'

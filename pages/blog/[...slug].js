@@ -1,53 +1,49 @@
-import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
+import { formatSlug, getAllFilesFrontMatter, getFileBySlug } from '@/lib/mdx'
 
 import { BlogSEO } from '@/components/SEO'
 import PostContent from '@/components/PostContent'
+import { flattenArticle } from '@/lib/flatten'
 import fs from 'fs'
 import generateRss from '@/lib/generate-rss'
 import siteMetadata from '@/data/siteMetadata'
 
 function Post({ post }) {
-  const { frontMatter } = post
-  const { slug } = frontMatter
+  const { id } = post
+  const slug = id
 
   return (
     <div>
-      <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} {...frontMatter} />
+      <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} {...post} />
       <PostContent post={post} />
     </div>
   )
 }
 
 export async function getStaticPaths() {
-  const posts = getFiles('blog')
+  const posts = await getAllFilesFrontMatter('articles.json')
   return {
     paths: posts.map((p) => ({
       params: {
-        slug: formatSlug(p).split('/'),
+        slug: formatSlug(p.id).split('/'),
       },
     })),
-    fallback: false,
+    fallback: 'blocking',
   }
 }
 
 export async function getStaticProps({ params }) {
-  const allPosts = await getAllFilesFrontMatter('blog')
-  const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === params.slug.join('/'))
+  const allPosts = await getAllFilesFrontMatter('articles.json')
+  const postIndex = allPosts.findIndex((post) => formatSlug(post.id) === params.slug.join('/'))
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
-  const post = await getFileBySlug('blog', params.slug.join('/'))
-  /*const authorList = post.frontMatter.authors || ['default']
-  const authorPromise = authorList.map(async (author) => {
-    const authorResults = await getFileBySlug('authors', [author])
-    return authorResults.frontMatter
-  })
-  const authorDetails = await Promise.all(authorPromise)
-*/
+  const post = await getFileBySlug('articles', params.slug.join('/'))
+  const flatPost = await flattenArticle(post)
   // rss
-  const rss = generateRss(allPosts, 'blog')
+
+  const rss = generateRss(allPosts, 'articles')
   fs.writeFileSync('./public/feed.xml', rss)
 
-  return { props: { post, prev, next } }
+  return { props: { post: flatPost, prev, next }, revalidate: 60 }
 }
 
 export default Post

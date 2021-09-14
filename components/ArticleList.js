@@ -58,12 +58,12 @@ function ArticleList({ path = 'blog', posts, showPagination }) {
           return (
             <PostPreview
               path={path}
-              key={node.slug}
-              slug={node.slug}
+              key={node.id}
+              slug={node.id}
               tags={node.tags}
               featured={node.featured}
               date={node.date}
-              image={node.images ? node.images[0] : null}
+              image={node.image ? node.image : null}
               title={node.title}
               description={node.summary}
             />

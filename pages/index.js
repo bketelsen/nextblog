@@ -32,9 +32,8 @@ function IndexPage({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
-
-  return { props: { posts } }
+  const posts = await getAllFilesFrontMatter('articles.json', true)
+  return { props: { posts }, revalidate: 60 }
 }
 
 export default IndexPage
