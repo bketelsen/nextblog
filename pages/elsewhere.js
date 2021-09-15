@@ -1,7 +1,7 @@
 import ArticleList from '../components/ArticleList'
 import { PageSEO } from '@/components/SEO'
 import SearchBar from '../components/SearchBar'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
+import { getAppearances } from '@/lib/queries'
 import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 
@@ -34,9 +34,12 @@ function ElsewherePage({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('appearances.json', true)
+  var allAppearances = await getAppearances()
 
-  return { props: { posts }, revalidate: 60 }
+  return {
+    props: { posts: allAppearances },
+    revalidate: 60,
+  }
 }
 
 export default ElsewherePage

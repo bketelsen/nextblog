@@ -3,7 +3,7 @@ import BlogCta from '@/components/BlogCta'
 import Hero from '@/components/Hero'
 import { PageSEO } from '@/components/SEO'
 import SubscribeCTA from '@/components/SubscribeCTA'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
+import { getArticles } from '@/lib/queries'
 import siteMetadata from '@/data/siteMetadata'
 
 function IndexPage({ posts }) {
@@ -32,8 +32,11 @@ function IndexPage({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('articles.json', true)
-  return { props: { posts }, revalidate: 60 }
+  var articles = await getArticles()
+  return {
+    props: { posts: articles },
+    revalidate: 60,
+  }
 }
 
 export default IndexPage

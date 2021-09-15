@@ -1,7 +1,7 @@
 import ArticleList from '../components/ArticleList'
 import { PageSEO } from '@/components/SEO'
 import SearchBar from '../components/SearchBar'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
+import { getArticles } from '@/lib/queries'
 import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 
@@ -31,9 +31,11 @@ function BlogPage({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('articles.json', true)
-
-  return { props: { posts }, revalidate: 60 }
+  const posts = await getArticles()
+  return {
+    props: { posts: posts },
+    revalidate: 60,
+  }
 }
 
 export default BlogPage

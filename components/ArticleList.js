@@ -63,7 +63,7 @@ function ArticleList({ path = 'blog', posts, showPagination }) {
               tags={node.tags}
               featured={node.featured}
               date={node.date}
-              image={node.image ? node.image : null}
+              image={node.Image ? node.Image : null}
               title={node.title}
               description={node.summary}
             />
