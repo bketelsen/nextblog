@@ -13,7 +13,7 @@ function Post({ post }) {
 
   return (
     <div>
-      <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} {...post} />
+      <BlogSEO url={`${siteMetadata.siteUrl}/articles/${slug}`} {...post} />
       <PostContent post={post} />
     </div>
   )

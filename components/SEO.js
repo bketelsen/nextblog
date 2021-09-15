@@ -132,7 +132,7 @@ export const BlogSEO = ({
     description: summary,
   }
 
-  const twImageUrl = `${siteMetadata.siteUrl}/static/images/og/blog/${slug}.png`
+  const twImageUrl = `https://res.cloudinary.com/bketelsen/image/upload/static/images/og/articles/${slug}.png`
 
   return (
     <>
@@ -222,7 +222,7 @@ export const ElsewhereSEO = ({
     description: summary,
   }
 
-  const twImageUrl = `${siteMetadata.siteUrl}/static/images/og/elsewhere/${slug}.png`
+  const twImageUrl = `https://res.cloudinary.com/bketelsen/image/upload/static/images/og/elsewhere/${slug}.png`
 
   return (
     <>
