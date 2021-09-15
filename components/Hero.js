@@ -6,8 +6,8 @@ function Hero() {
     <div className="min-h-50 hero bg-base-200">
       <div className="flex-col hero-content lg:flex-row-reverse">
         <Image
-          height={600}
-          width={600}
+          height={450}
+          width={450}
           className="max-w-xs rounded-lg shadow-2xl"
           src="/static/images/brian-head.jpeg"
           alt="Brian Ketelsen"
